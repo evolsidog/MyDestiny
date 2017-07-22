@@ -1,0 +1,16 @@
+Instrucciones de uso:
+
+Clave obtenida desde la pagina web de google places:
+ url -> https://developers.google.com/places/web-service/supported_types
+
+La url tambien contiene los tipos que tienen los puntos de interes.
+
+Explicación código:
+
+Importamos las librerias necesarias 
+Creamos tres funciones necesarias:
+
+	1) parseGoogleXMLResponse , que traduce un fichero xml a un diccionario formado por el nombre del pois, su tipo y calle
+	2) getGoogleInfo, dada una long,lat, radio y tipo, nos da los mejores 20 POIs dentro del circulo centrado en lat y long y radio el radio
+	3) find_lat_long dada el nombre de una ciudad y el codigo del pais no da su latitud y longitud
+
