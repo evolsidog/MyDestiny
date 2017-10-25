@@ -12,6 +12,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = db_uri
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
 app.config['SECRET_KEY'] = 'super-secret'
 app.config['SECURITY_REGISTERABLE'] = True
+app.config['SECURITY_PASSWORD_HASH'] = 'plaintext'
 # TODO Remove debug
 app.debug = True
 db = SQLAlchemy(app)
@@ -51,16 +52,19 @@ def create_user():
     db.session.commit()
 '''
 
+
 @app.route('/')
 def index():
-    #my_user = User.query.all()
-    #one_item = User.query.filter_by(email="ema").first()
-    #return render_template('add_user.html', my_user=my_user, one_item=one_item)
-    return render_template('add_user.html')
+    # my_user = User.query.all()
+    # one_item = User.query.filter_by(email="ema").first()
+    # return render_template('add_user.html', my_user=my_user, one_item=one_item)
+    return render_template('index.html')
 
-@app.route('/profile/<username>')
-def profile(username):
-    user = User.query.filter_by(username=username).first()
+
+@app.route('/profile/<email>')
+@login_required
+def profile(email):
+    user = User.query.filter_by(email=email).first()
     return render_template('profile.html', user=user)
 
 
