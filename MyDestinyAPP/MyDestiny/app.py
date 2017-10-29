@@ -3,18 +3,29 @@ from flask_sqlalchemy import SQLAlchemy
 from flask import request, redirect, url_for, render_template
 from flask_security import Security, SQLAlchemyUserDatastore, \
     UserMixin, RoleMixin, login_required
+
 import os
 
 app = Flask(__name__)
+# TODO Remove debug
+app.debug = True
+# app.config['SEND_REGISTER_EMAIL'] = False
+
+app.config['SECURITY_SEND_REGISTER_EMAIL'] = False
+# SQLAlchemy config
 db_path = os.path.join(os.path.dirname(__file__), 'app.db')
 db_uri = 'sqlite:///{}'.format(db_path)
 app.config['SQLALCHEMY_DATABASE_URI'] = db_uri
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
 app.config['SECRET_KEY'] = 'super-secret'
 app.config['SECURITY_REGISTERABLE'] = True
 app.config['SECURITY_PASSWORD_HASH'] = 'plaintext'
-# TODO Remove debug
-app.debug = True
+# Mail config
+app.config['MAIL_SERVER'] = 'smtp.example.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USE_SSL'] = True
+app.config['MAIL_USERNAME'] = 'username'
+app.config['MAIL_PASSWORD'] = 'password'
+
 db = SQLAlchemy(app)
 
 # Define models
@@ -42,6 +53,8 @@ class User(db.Model, UserMixin):
 # Setup Flask-Security
 user_datastore = SQLAlchemyUserDatastore(db, User, Role)
 security = Security(app, user_datastore)
+
+
 
 '''
 # Create a user to test with
