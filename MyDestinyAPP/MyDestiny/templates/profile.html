@@ -1,14 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Profile | {{ user.username }}</title>
-</head>
-<body>
+{% extends "layouts/layout1.html" %}
+{% from "security/_macros.html" import render_field_with_errors, render_field %}
+{% include "security/_messages.html" %}
+{% block title %}
+    Profile | {{ user.email }}
+{% endblock %}
+{% block content %}
 
-    <h1>{{user.username}} - Profile</h1>
+<br><br><br><br><br><br><br>
+<h1>{{ user.email }} - Profile</h1>
 
-    <h2>Email: {{user.email}}</h2>
+<h2>Email: {{ user.countries }}</h2>
 
-</body>
-</html>
+<h1>{{ user }}</h1>
+
+<form action="{{ url_for('add_country_profile') }}" method=post class=add-entry>
+
+    <input name="userId" type="hidden" value="{{ user.id }}">
+
+    <select name="countrySelect" class="btn btn-primary">
+        {% for c in countries_list %}
+            <option value="{{ c.id }}">{{ c.name }}</option>
+        {% endfor %}
+    </select>
+
+  <br>
+  <input value="Add country" type="submit" class="btn btn-primary">
+
+</form>
+
+
+<form action="{{ url_for('remove_country_profile') }}" method=post class=add-entry>
+
+    <input name="userId" type="hidden" value="{{ user.id }}">
+
+    <select name="countrySelect" class="btn btn-primary">
+        {% for c in countries_list %}
+            <option value="{{ c.id }}">{{ c.name }}</option>
+        {% endfor %}
+    </select>
+
+  <br>
+  <input value="Remove country" type="submit" class="btn btn-primary">
+
+</form>
+
+<form action="{{ url_for('suggestion') }}" method=post class=add-entry>
+
+    <input name="userId" type="hidden" value="{{ user.id }}">
+
+
+  <br>
+  <input value="Remove country" type="submit" class="btn btn-primary">
+
+</form>
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+
+{% endblock %}

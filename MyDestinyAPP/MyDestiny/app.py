@@ -84,11 +84,46 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/profile/<email>')
+@app.route('/profile/<email>', methods=['GET'])
 @login_required
-def profile(email):
+def show_profile(email):
     user = User.query.filter_by(email=email).first()
-    return render_template('profile.html', user=user)
+    countries = Country.query.all()
+    return render_template('profile.html', user=user, countries_list=countries)
+
+
+@app.route('/profile/add_country', methods=['POST'])
+def add_country_profile():
+    user = User.query.filter_by(id=request.form['userId']).first()
+    # Add country to the user
+    c = Country.query.filter_by(id=request.form['countrySelect']).first()
+    if c not in user.countries:
+        user.countries.append(c)
+        db.session.commit()
+    countries = Country.query.all()
+    return render_template('profile.html', user=user, countries_list=countries)
+
+
+@app.route('/profile/remove_country', methods=['POST'])
+def remove_country_profile():
+    user = User.query.filter_by(id=request.form['userId']).first()
+    # Add country to the user
+    c = Country.query.filter_by(id=request.form['countrySelect']).first()
+    if c in user.countries:
+        user.countries.remove(c)
+        db.session.commit()
+    countries = Country.query.all()
+    return render_template('profile.html', user=user, countries_list=countries)
+
+
+@app.route('/profile/suggestion', methods=['POST'])
+def suggestion():
+    user = User.query.filter_by(id=request.form['userId']).first()
+    # Add country to the user
+    countries = user.countries
+    # TODO Load PKL and return travel
+    result = "hola"
+    return render_template('profile.html', user=user, countries_list=countries, result=result)
 
 
 @app.route('/post_user', methods=['POST'])
