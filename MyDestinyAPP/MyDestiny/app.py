@@ -33,11 +33,21 @@ roles_users = db.Table('roles_users',
                        db.Column('user_id', db.Integer(), db.ForeignKey('user.id')),
                        db.Column('role_id', db.Integer(), db.ForeignKey('role.id')))
 
+countries_users = db.Table('country_users',
+                           db.Column('user_id', db.Integer(), db.ForeignKey('user.id')),
+                           db.Column('country_id', db.Integer(), db.ForeignKey('country.id')))
+
 
 class Role(db.Model, RoleMixin):
     id = db.Column(db.Integer(), primary_key=True)
     name = db.Column(db.String(80), unique=True)
     description = db.Column(db.String(255))
+
+
+class Country(db.Model):
+    id = db.Column(db.Integer(), primary_key=True)
+    name = db.Column(db.String(80), unique=True)
+    code = db.Column(db.String(2))
 
 
 class User(db.Model, UserMixin):
@@ -48,13 +58,13 @@ class User(db.Model, UserMixin):
     confirmed_at = db.Column(db.DateTime())
     roles = db.relationship('Role', secondary=roles_users,
                             backref=db.backref('users', lazy='dynamic'))
+    countries = db.relationship('Country', secondary=countries_users,
+                                backref=db.backref('users', lazy='dynamic'))
 
 
 # Setup Flask-Security
 user_datastore = SQLAlchemyUserDatastore(db, User, Role)
 security = Security(app, user_datastore)
-
-
 
 '''
 # Create a user to test with
