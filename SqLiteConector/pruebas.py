@@ -38,7 +38,8 @@ def dar_destino(listaCandidatos,pesos,distances,predecir):
 
 def main():
 	#creamos las conexiones con la base de datos
-	sql = SqLiteConnection()
+    	path = '/home/vic/Repositorios/MyDestiny/MyDestinyAPP/MyDestiny/app.db'
+	sql = SqLiteConnection(path)
 	con = sql.connector()
 	query = 'select * from datosmodelo'
 	#cargamos los datos para el modelo
@@ -52,13 +53,13 @@ def main():
 	vecinos  = NearestNeighbors(n_neighbors=5,metric='cosine',algorithm='brute')
 	vecinos = vecinos.fit(X)
 	#guardamos el modelo
-	filename = 'finalized_model.sav'
+	filename = 'train_model.pkl'
 	pickle.dump(vecinos, open(filename, 'wb'))
 
 	return agrupados,datos,destinos
 
 if __name__ == '__main__':
-	filename = 'finalized_model.sav'
+	filename = 'train_model.pkl'
 	agrupados,datos,destinos = main()
 	# load the model from disk
 	loaded_model = pickle.load(open(filename, 'rb'))
