@@ -1,3 +1,5 @@
+# -*- coding: UTF8 -*-
+
 from SqLiteConnection import SqLiteConnection
 import pandas as pd
 import pickle
