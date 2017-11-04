@@ -46,8 +46,22 @@
                 </button>
                 <h5 class="navbar-brand">My Destiny</h5>
             </div>
+
+             <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a class="navbar-brand" href="{{ url_for('show_profile') }}">Profile</a>
+                    </li>
+                </ul>
+            </div>
         </div>
         <!-- /.container-fluid -->
+
+        <!-- /.navbar-collapse -->
     </nav>
 
     {% block content %}

@@ -7,16 +7,13 @@ import os
 import numpy as np
 
 import RecommendationSystem as rs
+from constants import *
 
-# Constants
-country_list = ['AT', 'BE', 'BG', 'CA', 'CH', 'CN', 'CV', 'CY', 'DE', 'DZ', 'ES', 'FR', 'GB', 'GE', 'GL', 'GR', 'IE',
-                'IL', 'IQ', 'IS', 'IT', 'JE', 'JO', 'JP', 'KE', 'KG', 'LK', 'MA', 'MK', 'MX', 'MZ', 'NL', 'NO', 'NP',
-                'PT', 'RU', 'SA', 'SE', 'TN', 'TR', 'UA', 'US', 'UZ', 'ZM']
-
+# App Init
+# ----------------------------------------------------------------------------------------- #
 app = Flask(__name__)
 # TODO Remove debug
 app.debug = True
-# app.config['SEND_REGISTER_EMAIL'] = False
 
 app.config['SECURITY_SEND_REGISTER_EMAIL'] = False
 # SQLAlchemy config
@@ -35,7 +32,9 @@ app.config['MAIL_PASSWORD'] = 'password'
 
 db = SQLAlchemy(app)
 
-# Define models
+# Models
+# ------------------------------------------------------------------------------------------ #
+
 roles_users = db.Table('roles_users',
                        db.Column('user_id', db.Integer(), db.ForeignKey('user.id')),
                        db.Column('role_id', db.Integer(), db.ForeignKey('role.id')))
@@ -73,15 +72,8 @@ class User(db.Model, UserMixin):
 user_datastore = SQLAlchemyUserDatastore(db, User, Role)
 security = Security(app, user_datastore)
 
-'''
-# Create a user to test with
-@app.before_first_request
-def create_user():
-    db.create_all()
-    user_datastore.create_user(email='vic@gmail.com', password='pass')
-    db.session.commit()
-'''
-
+# Blueprints
+# ----------------------------------------------------------------------------------- #
 
 @app.route('/')
 def index():
@@ -91,7 +83,7 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/profile/<email>', methods=['GET'])
+@app.route('/profile', methods=['GET'])
 @login_required
 def show_profile(email):
     user = User.query.filter_by(email=email).first()

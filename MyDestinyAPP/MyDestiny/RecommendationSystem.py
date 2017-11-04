@@ -2,13 +2,7 @@ from SqLiteConnection import SqLiteConnection
 import pandas as pd
 import pickle
 from sklearn.neighbors import NearestNeighbors
-
-# Constants
-path_model = 'train_model.pkl'
-path_db = 'app.db'
-destinos = ['AT', 'BE', 'BG', 'CA', 'CH', 'CN', 'CV', 'CY', 'DE', 'DZ', 'ES', 'FR', 'GB', 'GE', 'GL', 'GR', 'IE',
-                'IL', 'IQ', 'IS', 'IT', 'JE', 'JO', 'JP', 'KE', 'KG', 'LK', 'MA', 'MK', 'MX', 'MZ', 'NL', 'NO', 'NP',
-                'PT', 'RU', 'SA', 'SE', 'TN', 'TR', 'UA', 'US', 'UZ', 'ZM']
+from constants import *
 
 # funciones auxiliares
 
@@ -46,6 +40,7 @@ def dar_destino(listaCandidatos, pesos, distances, predecir):
 
 
 def predict(input):
+    # TODO Javi: Cambiar variables y metodos a ingles
     # TODO Javi: Crear tabla agrupados_modelo (tabla con pesos).
     # TODO Javi: Leer solo pesos necesarios
     # TODO Javi: Optimizar el codgio, revisarlo. (Por ejemplo, acabamos de cmabiar destinos por una constante de arriba)
