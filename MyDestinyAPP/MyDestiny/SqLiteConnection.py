@@ -2,6 +2,7 @@
 # -*- coding: UTF8 -*-
 #
 import sqlite3
+from constants import *
 
 
 class SqLiteConnection():
@@ -12,7 +13,7 @@ Atributo: Directorio de la base de datos
     SID = None
     connection = None
 
-    def __init__(self, bd='app.db'):
+    def __init__(self, bd=PATH_DB):
         self.bd = bd
         self.connection = ''
 
@@ -28,12 +29,10 @@ Atributo: Directorio de la base de datos
         self._open()
         return self.connection
 
-    def executeQuery(self, query):
+    def execute_query(self, query):
         """Execute a query
-        Args:
-                query
-        Returns:
-                A handler with the query results
+        Args: query
+        Returns: A handler with the query results
         """
         self._open()
         try:

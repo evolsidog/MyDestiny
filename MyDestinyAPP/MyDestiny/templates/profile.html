@@ -7,48 +7,65 @@
 {% block content %}
 
 <br><br><br><br><br><br><br>
-<h1>{{ user.email }} - Profile</h1>
+ <div class="row" align="center">
+     <!-- Column 1 -->
+    <div class="col-xs-6">
+        <h1>{{ user.email }} - Profile</h1>
 
-<h2>Email: {{ user.countries }}</h2>
+        <h5>Countries:
+            {% for c in user.countries %}
+                {{ c.name }} &nbsp
+            {% endfor %}
+        </h5>
 
-<h1>{{ user }}</h1>
+        <h3>Add travel</h3>
+        <form action="{{ url_for('add_country_profile') }}" method=post class=add-entry>
 
-<form action="{{ url_for('add_country_profile') }}" method=post class=add-entry>
+            <select name="countrySelect" class="btn btn-primary">
+                {% for c in countries_list %}
+                    <option value="{{ c.id }}">{{ c.name }}</option>
+                {% endfor %}
+            </select>
 
-    <select name="countrySelect" class="btn btn-primary">
-        {% for c in countries_list %}
-            <option value="{{ c.id }}">{{ c.name }}</option>
-        {% endfor %}
-    </select>
+          <br>
+          <input value="Add country" type="submit" class="btn btn-primary">
 
-  <br>
-  <input value="Add country" type="submit" class="btn btn-primary">
+        </form>
 
-</form>
+        <h3>Remove travel</h3>
+        <form action="{{ url_for('remove_country_profile') }}" method=post class=add-entry>
 
+            <select name="countrySelect" class="btn btn-primary">
+                {% for c in countries_list %}
+                    <option value="{{ c.id }}">{{ c.name }}</option>
+                {% endfor %}
+            </select>
 
-<form action="{{ url_for('remove_country_profile') }}" method=post class=add-entry>
+          <br>
+          <input value="Remove country" type="submit" class="btn btn-primary">
 
-    <select name="countrySelect" class="btn btn-primary">
-        {% for c in countries_list %}
-            <option value="{{ c.id }}">{{ c.name }}</option>
-        {% endfor %}
-    </select>
+        </form>
 
-  <br>
-  <input value="Remove country" type="submit" class="btn btn-primary">
-
-</form>
-
-<form action="{{ url_for('suggestion') }}" method=post class=add-entry>
+        <h3>Give me a travel</h3>
+        <form action="{{ url_for('suggestion') }}" method=post class=add-entry>
 
 
-  <br>
-  <input value="Give me a travel!" type="submit" class="btn btn-primary">
+          <br>
+          <input value="Give me a travel!" type="submit" class="btn btn-primary">
 
-</form>
+        </form>
 
-<h4>{{ result }}</h4>
+
+    </div>
+     <!-- End Column 1 -->
+     <!-- Column 2 -->
+     <div class="col-xs-6">
+         <h4><b>{{ result }}</b></h4>
+        <iframe src="{{ url_for('show_map') }}" width="900" height="600"></iframe>
+     </div>
+     <!-- End Column 2 -->
+</div>
+
 <br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br>
 

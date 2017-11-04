@@ -6,6 +6,7 @@ import pickle
 from sklearn.neighbors import NearestNeighbors
 from constants import *
 
+
 # funciones auxiliares
 
 # funcion auxiliar para restar dos listas coordenada a coordenada
@@ -65,4 +66,3 @@ def predict(input):
     destino = dar_destino(candidatos, pesos, distances[0], input[0])
     # Return country ISO code
     return COUNTRY_LIST[destino]
-

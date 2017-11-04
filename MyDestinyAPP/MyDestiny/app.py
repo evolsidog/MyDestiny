@@ -1,4 +1,5 @@
-from flask import Flask
+# -*- coding: UTF8 -*-
+from flask import Flask, send_file
 from flask_sqlalchemy import SQLAlchemy
 from flask import request, redirect, url_for, render_template
 from flask_security import Security, SQLAlchemyUserDatastore, \
@@ -7,6 +8,7 @@ import os
 import numpy as np
 
 import RecommendationSystem as rs
+import poi
 from constants import *
 
 # App Init
@@ -64,7 +66,7 @@ class User(db.Model, UserMixin):
     confirmed_at = db.Column(db.DateTime())
     roles = db.relationship('Role', secondary=roles_users,
                             backref=db.backref('users', lazy='dynamic'))
-    countries = db.relationship('Country', secondary=countries_users,
+    countries = db.relationship('Country', order_by="Country.name", secondary=countries_users,
                                 backref=db.backref('users', lazy='dynamic'))
 
 
@@ -72,23 +74,18 @@ class User(db.Model, UserMixin):
 user_datastore = SQLAlchemyUserDatastore(db, User, Role)
 security = Security(app, user_datastore)
 
+
 # Blueprints
 # ----------------------------------------------------------------------------------- #
 
 @app.route('/')
 def index():
-    # my_user = User.query.all()
-    # one_item = User.query.filter_by(email="ema").first()
-    # return render_template('add_user.html', my_user=my_user, one_item=one_item)
     return render_template('index.html')
 
 
 @app.route('/profile', methods=['GET'])
 @login_required
 def show_profile():
-    print(current_user)
-    #session.get('user_id')
-    #user = User.query.filter_by(email=email).first()
     countries = Country.query.filter(Country.code.in_(COUNTRY_LIST)).all()
     return render_template('profile.html', user=current_user, countries_list=countries)
 
@@ -122,18 +119,25 @@ def suggestion():
         # We prepare input for the model
         codes_countries = [c.code for c in current_user.countries]
         # Initalize array with zeros
-        array_countries = np.array([0]*44)
+        array_countries = np.array([0] * 44)
         # Assign ones where the user has traveled
         for code in codes_countries:
             array_countries[COUNTRY_LIST.index(code)] = 1
-        result_country = rs.predict(np.array([array_countries]))
-        result_country = Country.query.filter_by(code=result_country).first()
-        result = result_country.name
+        code_country_result = rs.predict(np.array([array_countries]))
+        # We get POI with the code of country
+        poi.generate_pois(code_country_result)
+        result_country = Country.query.filter_by(code=code_country_result).first()
+        result = 'Te recomendamos: ' + result_country.name
     else:
         result = 'Please, add some travel'
 
     countries = Country.query.filter(Country.code.in_(COUNTRY_LIST)).all()
     return render_template('profile.html', user=current_user, countries_list=countries, result=result)
+
+
+@app.route('/poi_map')
+def show_map():
+    return send_file(POI_FILE)
 
 
 @app.route('/post_user', methods=['POST'])
