@@ -43,18 +43,16 @@ def dar_destino(listaCandidatos, pesos, distances, predecir):
 
 def predict(input):
     # TODO Javi: Cambiar variables y metodos a ingles
-    # TODO Javi: Crear tabla agrupados_modelo (tabla con pesos).
+    # TODO Javi: Crear tabla agrupados_modelo (tabla con pesos). OK
     # TODO Javi: Leer solo pesos necesarios
-    # TODO Javi: Optimizar el codgio, revisarlo. (Por ejemplo, acabamos de cmabiar destinos por una constante de arriba)
+    # TODO Javi: Optimizar el codgio, revisarlo. (Por ejemplo, acabamos de cmabiar destinos por una constante de arriba) OK
     # TODO Javi: Insertar nuevos usuarios.
     # creamos las conexiones con la base de datos
     sql = SqLiteConnection(PATH_DB)
     con = sql.connector()
-    query = 'select * from datosmodelo'
+    query = 'select * from agrupados_modelo'
     # cargamos los datos para el modelo
-    datos = pd.read_sql(query, con, index_col='id')
-    # agrupamos todos los vectores iguales
-    agrupados = datos.groupby(COUNTRY_LIST)['full_name'].count().reset_index()
+    agrupados = pd.read_sql(query, con, index_col='id')
     model = pickle.load(open(PATH_MODEL, 'rb'))
     # sacamos las prediciones, o vectores que mas se asemejen al original
     distances, indexes = model.kneighbors(input)
