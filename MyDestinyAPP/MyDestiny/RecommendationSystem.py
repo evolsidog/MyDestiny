@@ -46,21 +46,21 @@ def predict(input):
     # TODO Javi: Optimizar el codgio, revisarlo. (Por ejemplo, acabamos de cmabiar destinos por una constante de arriba)
     # TODO Javi: Insertar nuevos usuarios.
     # creamos las conexiones con la base de datos
-    sql = SqLiteConnection(path_db)
+    sql = SqLiteConnection(PATH_DB)
     con = sql.connector()
     query = 'select * from datosmodelo'
     # cargamos los datos para el modelo
     datos = pd.read_sql(query, con, index_col='id')
     # agrupamos todos los vectores iguales
-    agrupados = datos.groupby(destinos)['full_name'].count().reset_index()
-    model = pickle.load(open(path_model, 'rb'))
+    agrupados = datos.groupby(COUNTRY_LIST)['full_name'].count().reset_index()
+    model = pickle.load(open(PATH_MODEL, 'rb'))
     # sacamos las prediciones, o vectores que mas se asemejen al original
     distances, indexes = model.kneighbors(input)
     # definimos las variables para sacar resultado
-    candidatos = agrupados.iloc[indexes[0], :][destinos].values
+    candidatos = agrupados.iloc[indexes[0], :][COUNTRY_LIST].values
     pesos = agrupados.iloc[indexes[0], :]['full_name'].values
     # obtenemos el resultado
     destino = dar_destino(candidatos, pesos, distances[0], input[0])
     # Return country ISO code
-    return destinos[destino]
+    return COUNTRY_LIST[destino]
 

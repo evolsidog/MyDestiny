@@ -15,8 +15,6 @@
 
 <form action="{{ url_for('add_country_profile') }}" method=post class=add-entry>
 
-    <input name="userId" type="hidden" value="{{ user.id }}">
-
     <select name="countrySelect" class="btn btn-primary">
         {% for c in countries_list %}
             <option value="{{ c.id }}">{{ c.name }}</option>
@@ -31,8 +29,6 @@
 
 <form action="{{ url_for('remove_country_profile') }}" method=post class=add-entry>
 
-    <input name="userId" type="hidden" value="{{ user.id }}">
-
     <select name="countrySelect" class="btn btn-primary">
         {% for c in countries_list %}
             <option value="{{ c.id }}">{{ c.name }}</option>
@@ -45,8 +41,6 @@
 </form>
 
 <form action="{{ url_for('suggestion') }}" method=post class=add-entry>
-
-    <input name="userId" type="hidden" value="{{ user.id }}">
 
 
   <br>

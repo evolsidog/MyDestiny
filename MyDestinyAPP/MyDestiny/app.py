@@ -2,7 +2,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask import request, redirect, url_for, render_template
 from flask_security import Security, SQLAlchemyUserDatastore, \
-    UserMixin, RoleMixin, login_required
+    UserMixin, RoleMixin, login_required, current_user
 import os
 import numpy as np
 
@@ -85,52 +85,55 @@ def index():
 
 @app.route('/profile', methods=['GET'])
 @login_required
-def show_profile(email):
-    user = User.query.filter_by(email=email).first()
-    countries = Country.query.filter(Country.code.in_(country_list)).all()
-    return render_template('profile.html', user=user, countries_list=countries)
+def show_profile():
+    print(current_user)
+    #session.get('user_id')
+    #user = User.query.filter_by(email=email).first()
+    countries = Country.query.filter(Country.code.in_(COUNTRY_LIST)).all()
+    return render_template('profile.html', user=current_user, countries_list=countries)
 
 
 @app.route('/profile/add_country', methods=['POST'])
 def add_country_profile():
-    user = User.query.filter_by(id=request.form['userId']).first()
     # Add country to the user
     c = Country.query.filter_by(id=request.form['countrySelect']).first()
-    if c not in user.countries:
-        user.countries.append(c)
+    if c not in current_user.countries:
+        current_user.countries.append(c)
         db.session.commit()
-    countries = Country.query.filter(Country.code.in_(country_list)).all()
-    return render_template('profile.html', user=user, countries_list=countries)
+    countries = Country.query.filter(Country.code.in_(COUNTRY_LIST)).all()
+    return render_template('profile.html', user=current_user, countries_list=countries)
 
 
 @app.route('/profile/remove_country', methods=['POST'])
 def remove_country_profile():
-    user = User.query.filter_by(id=request.form['userId']).first()
     # Add country to the user
     c = Country.query.filter_by(id=request.form['countrySelect']).first()
-    if c in user.countries:
-        user.countries.remove(c)
+    if c in current_user.countries:
+        current_user.countries.remove(c)
         db.session.commit()
-    countries = Country.query.filter(Country.code.in_(country_list)).all()
-    return render_template('profile.html', user=user, countries_list=countries)
+    countries = Country.query.filter(Country.code.in_(COUNTRY_LIST)).all()
+    return render_template('profile.html', user=current_user, countries_list=countries)
 
 
 @app.route('/profile/suggestion', methods=['POST'])
 def suggestion():
-    user = User.query.filter_by(id=request.form['userId']).first()
     # Add country to the user
-    countries = user.countries
+    if current_user.countries:
+        # We prepare input for the model
+        codes_countries = [c.code for c in current_user.countries]
+        # Initalize array with zeros
+        array_countries = np.array([0]*44)
+        # Assign ones where the user has traveled
+        for code in codes_countries:
+            array_countries[COUNTRY_LIST.index(code)] = 1
+        result_country = rs.predict(np.array([array_countries]))
+        result_country = Country.query.filter_by(code=result_country).first()
+        result = result_country.name
+    else:
+        result = 'Please, add some travel'
 
-    # We prepare input for the model
-    codes_countries = [c.code for c in countries]
-    # Initalize array with zeros
-    array_countries = np.array([0]*44)
-    # Assign ones where the user has traveled
-    for code in codes_countries:
-        array_countries[country_list.index(code)] = 1
-    result_country = rs.predict(np.array([array_countries]))
-    result = Country.query.filter_by(code=result_country).first()
-    return render_template('profile.html', user=user, countries_list=countries, result=result.name)
+    countries = Country.query.filter(Country.code.in_(COUNTRY_LIST)).all()
+    return render_template('profile.html', user=current_user, countries_list=countries, result=result)
 
 
 @app.route('/post_user', methods=['POST'])
