@@ -8,4 +8,5 @@ PATH_DB = 'app.db'
 # TODO Review types https://developers.google.com/places/supported_types?hl=es-419
 POI_TYPES = ['restaurant','bank','museum']
 GOOGLE_KEY = 'AIzaSyAU-Eilx7Ze5E39LfpE4PnSBIuISRc_Ltc'
-POI_FILE = 'templates/poi.html'
+POI_FILE = 'templates/maps/'
+POI_DEFAULT_CODE = 'ES'
