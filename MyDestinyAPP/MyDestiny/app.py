@@ -33,6 +33,7 @@ app.config['MAIL_USERNAME'] = 'username'
 app.config['MAIL_PASSWORD'] = 'password'
 
 db = SQLAlchemy(app)
+app.logger.info('Starting APP MyDestiny')
 
 # Models
 # ------------------------------------------------------------------------------------------ #
@@ -88,8 +89,9 @@ def index():
 def show_profile():
     countries = Country.query.filter(Country.code.in_(COUNTRY_LIST)).all()
     poi.generate_pois(POI_DEFAULT_CODE)
+    map_path = 'poi_map/' + POI_DEFAULT_CODE + '.html'
     return render_template('profile.html', user=current_user, countries_list=countries,
-                           map='poi_map/' + POI_DEFAULT_CODE + '.html')
+                           map=map_path)
 
 
 @app.route('/profile/add_country', methods=['POST'])
@@ -99,8 +101,7 @@ def add_country_profile():
     if c not in current_user.countries:
         current_user.countries.append(c)
         db.session.commit()
-    countries = Country.query.filter(Country.code.in_(COUNTRY_LIST)).all()
-    return render_template('profile.html', user=current_user, countries_list=countries)
+    return redirect(url_for('show_profile'))
 
 
 @app.route('/profile/remove_country', methods=['POST'])
@@ -110,56 +111,59 @@ def remove_country_profile():
     if c in current_user.countries:
         current_user.countries.remove(c)
         db.session.commit()
-    countries = Country.query.filter(Country.code.in_(COUNTRY_LIST)).all()
-    return render_template('profile.html', user=current_user, countries_list=countries)
+    return redirect(url_for('show_profile'))
 
 
 @app.route('/profile/suggestion', methods=['POST'])
 def suggestion():
-    # Add country to the user
-    if current_user.countries:
-        # We prepare input for the model
-        codes_countries = [c.code for c in current_user.countries]
-        # Initalize array with zeros
-        array_countries = np.array([0] * 44)
-        # Assign ones where the user has traveled
-        for code in codes_countries:
-            array_countries[COUNTRY_LIST.index(code)] = 1
-        code_country_result = rs.predict(np.array([array_countries]))
-        if not os.path.exists(POI_FILE + code_country_result + '.html'):
-            poi.generate_pois(code_country_result)
-        result_country = Country.query.filter_by(code=code_country_result).first()
-        result = 'Te recomendamos: ' + result_country.name
-    else:
-        result = 'Please, add some travel'
+    try:
+        # Add country to the user
+        if current_user.countries:
+            # We prepare input for the model
+            codes_countries = [c.code for c in current_user.countries]
+            # Initalize array with zeros
+            array_countries = np.array([0] * 44)
+            # Assign ones where the user has traveled
+            for code in codes_countries:
+                array_countries[COUNTRY_LIST.index(code)] = 1
+            code_country_result = rs.predict(np.array([array_countries]))
+            if not os.path.exists(POI_FILE + code_country_result + '.html'):
+                poi.generate_pois(code_country_result)
+            result_country = Country.query.filter_by(code=code_country_result).first()
+            result = 'Te recomendamos: ' + result_country.name
+        else:
+            result = 'Please, add some travel'
+    except Exception as e:
+        app.logger.error(e)
 
     countries = Country.query.filter(Country.code.in_(COUNTRY_LIST)).all()
+    map_path = '/poi_map/' + code_country_result + '.html'
     return render_template('profile.html', user=current_user, countries_list=countries, result=result,
-                           map='/poi_map/' + code_country_result + '.html')
+                           map=map_path)
 
-
+'''
 @app.route('/poi_map')
 def show_map_init(code_country=None):
-    print 'Peticion mapa por defecto'
+    app.logger.info('Peticion mapa por defecto')
     poi.generate_pois(POI_DEFAULT_CODE)
-    print 'Enviano mapa:' + POI_FILE + POI_DEFAULT_CODE + '.html'
+    app.logger.info('Enviano mapa:' + POI_FILE + POI_DEFAULT_CODE + '.html')
     return send_file(POI_FILE + POI_DEFAULT_CODE + '.html')
-
+'''
 
 @app.route('/poi_map/<map>')
 def show_map(map):
-    print 'Peticion mapa: ' + str(map)
-    print 'Enviano mapa:' + POI_FILE + map
+    app.logger.info('Peticion mapa: ' + str(map))
+    app.logger.info('Enviando mapa:' + POI_FILE + map)
     return send_file(POI_FILE + map)
 
-
+'''
 @app.route('/post_user', methods=['POST'])
 def post_user():
     user = User(request.form['username'], request.form['email'])
     db.session.add(user)
     db.session.commit()
     return redirect(url_for('index'))
-
+'''
 
 if __name__ == "__main__":
     app.run()

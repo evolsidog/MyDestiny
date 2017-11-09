@@ -3,6 +3,7 @@
 import folium
 import urllib2
 import xml.etree.ElementTree as ET
+import os
 
 from constants import *
 
@@ -108,7 +109,8 @@ def generate_pois(country_code):
         folium.Marker([lat, lon], popup=name, icon=folium.Icon(color='red', icon='info-sign')).add_to(map)
 
     # Para probar exportamos a un html y vemos si ha funcionado
-    map.save(POI_FILE)
+    map.save(POI_FILE + country_code + '.html')
+    print POI_FILE + country_code + '.html'
 
 
 '''
