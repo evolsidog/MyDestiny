@@ -13,7 +13,7 @@ from constants import *
 
 # App Init
 # ----------------------------------------------------------------------------------------- #
-sql = SqLiteConnection(PATH_DB)
+# sql = SqLiteConnection(PATH_DB)
 app = Flask(__name__)
 # TODO Remove debug
 app.debug = True
@@ -101,10 +101,9 @@ def show_profile():
 def add_country_profile():
     # Add country to the user
     c = Country.query.filter_by(id=request.form['countrySelect']).first()
-    query =  "update datosmodelo set {} = 1 where full_name = '{}'".format(c.code,current_user.email) 
-    print query
+    # query =  "update datosmodelo set {} = 1 where full_name = '{}'".format(c.code,current_user.email)
     if c not in current_user.countries:
-        sql.execute_query(query)
+        # sql.execute_query(query)
         current_user.countries.append(c)
         db.session.commit()
     return redirect(url_for('show_profile'))
@@ -114,9 +113,9 @@ def add_country_profile():
 def remove_country_profile():
     # Add country to the user
     c = Country.query.filter_by(id=request.form['countrySelect']).first()
-    query =  "update datosmodelo set {} = 0 where full_name = '{}'".format(c.code,current_user.email)
+    # query =  "update datosmodelo set {} = 0 where full_name = '{}'".format(c.code,current_user.email)
     if c in current_user.countries:
-        sql.execute_query(query)
+        # sql.execute_query(query)
         current_user.countries.remove(c)
         db.session.commit()
     return redirect(url_for('show_profile'))
@@ -134,10 +133,13 @@ def suggestion():
             # Assign ones where the user has traveled
             for code in codes_countries:
                 array_countries[COUNTRY_LIST.index(code)] = 1
-            code_country_result = rs.predict(np.array([array_countries]))
-            if not os.path.exists(POI_FILE + code_country_result + '.html'):
-                poi.generate_pois(code_country_result)
-            result_country = Country.query.filter_by(code=code_country_result).first()
+            list_code_country_result = rs.predict(np.array([array_countries]))
+            print str(list_code_country_result)
+            code_first = list_code_country_result[0]
+            if not os.path.exists(POI_FILE + code_first + '.html'):
+                poi.generate_pois(code_first)
+            result_country = Country.query.filter_by(code=code_first).first()
+            list_result_country = Country.query.filter(Country.code.in_(list_code_country_result[1:])).all()
             result = 'Te recomendamos: ' + result_country.name
         else:
             result = 'Please, add some travel'
@@ -145,9 +147,10 @@ def suggestion():
         app.logger.error(e)
 
     countries = Country.query.filter(Country.code.in_(COUNTRY_LIST)).all()
-    map_path = '/poi_map/' + code_country_result + '.html'
+    map_path = '/poi_map/' + code_first + '.html'
     return render_template('profile.html', user=current_user, countries_list=countries, result=result,
-                           map=map_path)
+                           map=map_path, list_countries=list_result_country)
+
 
 '''
 @app.route('/poi_map')
@@ -158,11 +161,13 @@ def show_map_init(code_country=None):
     return send_file(POI_FILE + POI_DEFAULT_CODE + '.html')
 '''
 
+
 @app.route('/poi_map/<map>')
 def show_map(map):
     app.logger.info('Peticion mapa: ' + str(map))
     app.logger.info('Enviando mapa:' + POI_FILE + map)
     return send_file(POI_FILE + map)
+
 
 '''
 @app.route('/post_user', methods=['POST'])
