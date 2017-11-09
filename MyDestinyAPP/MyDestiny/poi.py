@@ -83,7 +83,7 @@ def get_places(country, key, radio=10000, types=None):
         return 'Error al meter los datos'
     else:
         if not types:
-            lugares = get_google_info(lat, lon, radio, key, types)
+            lugares = get_google_info(lat, lon, radio, key,types)
         else:
             lugares = []
             for i in types:
@@ -95,14 +95,11 @@ def get_places(country, key, radio=10000, types=None):
 # TODO Hacer clase de test con todos los paises de la lista, creo que a veces da error porque algunos no tienen museos. Vigilar esos errores
 def generate_pois(country_code):
     print country_code
-    lat_origen, lon_origen, lugares = get_places(country_code, GOOGLE_KEY, types=POI_TYPES)
-    restaurant = lugares[0]
-    bank = lugares[1]
-    museum = lugares[2]
+    lat_origen, lon_origen, lugares = get_places(country_code, GOOGLE_KEY)
     map = folium.Map(location=[lat_origen, lon_origen], zoom_start=12)
 
     # creamos los marcadores con los puntos donde se situan los POIs
-    for dicc in museum:
+    for dicc in lugares:
         lat = float(dicc['lat'])
         lon = float(dicc['lng'])
         name = dicc['name']
@@ -116,20 +113,7 @@ def generate_pois(country_code):
 '''
 if __name__ == '__main__':
     # TODO INPUT
-    lat_origen, lon_origen, lugares = get_places('BE', GOOGLE_KEY, types=POI_TYPES)
+    generate_pois('BE')
 
-    restaurant = lugares[0]
-    bank = lugares[1]
-    museum = lugares[2]
-    map = folium.Map(location=[lat_origen, lon_origen], zoom_start=12)
-
-    # creamos los marcadores con los puntos donde se situan los POIs
-    for dicc in museum:
-        lat = float(dicc['lat'])
-        lon = float(dicc['lng'])
-        name = dicc['name']
-        folium.Marker([lat, lon], popup=name, icon=folium.Icon(color='red', icon='info-sign')).add_to(map)
-
-    # Para probar exportamos a un html y vemos si ha funcionado
-    map.save('map.html')
 '''
+
