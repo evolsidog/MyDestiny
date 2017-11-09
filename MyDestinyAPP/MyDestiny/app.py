@@ -6,13 +6,14 @@ from flask_security import Security, SQLAlchemyUserDatastore, \
     UserMixin, RoleMixin, login_required, current_user
 import os
 import numpy as np
-
+import SqLiteConnection
 import RecommendationSystem as rs
 import poi
 from constants import *
 
 # App Init
 # ----------------------------------------------------------------------------------------- #
+sql = SqLiteConnection(PATH_DB)
 app = Flask(__name__)
 # TODO Remove debug
 app.debug = True
@@ -87,6 +88,8 @@ def index():
 @login_required
 def show_profile():
     countries = Country.query.filter(Country.code.in_(COUNTRY_LIST)).all()
+    query = "insert into datosmodelo values (125,'{}','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)".format(current_user.email)
+    sql.execute_query(query)
     return render_template('profile.html', user=current_user, countries_list=countries)
 
 
@@ -94,7 +97,10 @@ def show_profile():
 def add_country_profile():
     # Add country to the user
     c = Country.query.filter_by(id=request.form['countrySelect']).first()
+    query =  "update datosmodelo set {} = 1 where full_name = '{}'".format(c.code,current_user.email) 
+    print query
     if c not in current_user.countries:
+        sql.execute_query(query)
         current_user.countries.append(c)
         db.session.commit()
     countries = Country.query.filter(Country.code.in_(COUNTRY_LIST)).all()
@@ -105,7 +111,9 @@ def add_country_profile():
 def remove_country_profile():
     # Add country to the user
     c = Country.query.filter_by(id=request.form['countrySelect']).first()
+    query =  "update datosmodelo set {} = 0 where full_name = '{}'".format(c.code,current_user.email)
     if c in current_user.countries:
+        sql.execute_query(query)
         current_user.countries.remove(c)
         db.session.commit()
     countries = Country.query.filter(Country.code.in_(COUNTRY_LIST)).all()
@@ -143,6 +151,7 @@ def show_map():
 @app.route('/post_user', methods=['POST'])
 def post_user():
     user = User(request.form['username'], request.form['email'])
+    print request.form['email']
     db.session.add(user)
     db.session.commit()
     return redirect(url_for('index'))
