@@ -41,12 +41,27 @@ def dar_destino(listaCandidatos, pesos, distances, predecir):
     destino = sol.index(max(sol))
     return destino
 
+def dar_destino_top5(listaCandidatos,pesos,distances,predecir):
+    destinos = []
+    for i in listaCandidatos:
+        aux = restar(i,predecir)
+        destinos.append(aux) 
+    destinoPesos = []
+    for i in range(len(pesos)):
+        distancia = distances[i]
+        peso = pesos[i]
+        destino = destinos[i]
+        destinoPesos.append(map(lambda x: x*peso,destino))
+    sol = reduce(lambda x,y:suma(x,y),destinoPesos,[0]*len(destinoPesos[0]))
+    orden = sorted(sol)
+    orden.reverse()
+    top_5 = orden[0:5]
+    destino = [sol.index(i) for i in top_5]
+    return destino
 
 def predict(input):
     # TODO Javi: Cambiar variables y metodos a ingles
-    # TODO Javi: Crear tabla agrupados_modelo (tabla con pesos). OK
     # TODO Javi: Leer solo pesos necesarios
-    # TODO Javi: Optimizar el codgio, revisarlo. (Por ejemplo, acabamos de cmabiar destinos por una constante de arriba) OK
     # TODO Javi: Insertar nuevos usuarios.
     # creamos las conexiones con la base de datos
     sql = SqLiteConnection(PATH_DB)
@@ -61,6 +76,9 @@ def predict(input):
     candidatos = agrupados.iloc[indexes[0], :][COUNTRY_LIST].values
     pesos = agrupados.iloc[indexes[0], :]['full_name'].values
     # obtenemos el resultado
-    destino = dar_destino(candidatos, pesos, distances[0], input[0])
+    destino = dar_destino(candidatos, pesos, distances[0], input[0])#
+    #destino_top5 = dar_destino_top5(candidatos, pesos, distances[0], input[0])
+    #return list of top5 country ISO code
+    #return [COUNTRY_LIST[destino] for destino in destino_top5]
     # Return country ISO code
     return COUNTRY_LIST[destino]
