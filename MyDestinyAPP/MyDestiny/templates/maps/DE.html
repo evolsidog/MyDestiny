@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS = false; L_NO_TOUCH = false; L_DISABLE_3D = false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <style> #map_6236741398fa4507ba29b0a45c079d89 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_6236741398fa4507ba29b0a45c079d89" ></div>
+        
+</body>
+<script>    
+    
+
+            
+                var bounds = null;
+            
+
+            var map_6236741398fa4507ba29b0a45c079d89 = L.map(
+                                  'map_6236741398fa4507ba29b0a45c079d89',
+                                  {center: [51.165691,10.451526],
+                                  zoom: 12,
+                                  maxBounds: bounds,
+                                  layers: [],
+                                  worldCopyJump: false,
+                                  crs: L.CRS.EPSG3857
+                                 });
+            
+        
+    
+            var tile_layer_17ae1b666c55426da537450f2dc6a3a1 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null, 
+  "detectRetina": false, 
+  "maxZoom": 18, 
+  "minZoom": 1, 
+  "noWrap": false, 
+  "subdomains": "abc"
+}
+                ).addTo(map_6236741398fa4507ba29b0a45c079d89);
+        
+    
+
+            var marker_7d05ce4f744b4f2a8965ae5f595eb191 = L.marker(
+                [51.1654151,10.4441128],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6236741398fa4507ba29b0a45c079d89);
+            
+    
+
+                var icon_fa750be1698e4ab8b92250b7975e7ec6 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_7d05ce4f744b4f2a8965ae5f595eb191.setIcon(icon_fa750be1698e4ab8b92250b7975e7ec6);
+            
+    
+            var popup_7133b4e76cf64a3ab49abe3cdef6d997 = L.popup({maxWidth: '300'});
+
+            
+                var html_1f3975586604463f89b70eb746e61e02 = $('<div id="html_1f3975586604463f89b70eb746e61e02" style="width: 100.0%; height: 100.0%;">Opfermoor</div>')[0];
+                popup_7133b4e76cf64a3ab49abe3cdef6d997.setContent(html_1f3975586604463f89b70eb746e61e02);
+            
+
+            marker_7d05ce4f744b4f2a8965ae5f595eb191.bindPopup(popup_7133b4e76cf64a3ab49abe3cdef6d997);
+
+            
+        
+    
+
+            var marker_4d606439950a4fc9a89c8642d65b8f60 = L.marker(
+                [51.2063191,10.4572673],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6236741398fa4507ba29b0a45c079d89);
+            
+    
+
+                var icon_36f893397fb048c9a2c22c9444cf475f = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_4d606439950a4fc9a89c8642d65b8f60.setIcon(icon_36f893397fb048c9a2c22c9444cf475f);
+            
+    
+            var popup_349b9758483d45b7974016fa265f2764 = L.popup({maxWidth: '300'});
+
+            
+                var html_cfa7fdac619a401db1ee0c251e5b9c7d = $('<div id="html_cfa7fdac619a401db1ee0c251e5b9c7d" style="width: 100.0%; height: 100.0%;">Kulturhistorisches Museum</div>')[0];
+                popup_349b9758483d45b7974016fa265f2764.setContent(html_cfa7fdac619a401db1ee0c251e5b9c7d);
+            
+
+            marker_4d606439950a4fc9a89c8642d65b8f60.bindPopup(popup_349b9758483d45b7974016fa265f2764);
+
+            
+        
+    
+
+            var marker_056b25b84a5a4de0aecee1cf51d35504 = L.marker(
+                [51.208268,10.456783],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6236741398fa4507ba29b0a45c079d89);
+            
+    
+
+                var icon_d2d7ed1ad25d43f0a121aac4ab990c8d = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_056b25b84a5a4de0aecee1cf51d35504.setIcon(icon_d2d7ed1ad25d43f0a121aac4ab990c8d);
+            
+    
+            var popup_23d5b6d7916040d5bc75b5058458b3aa = L.popup({maxWidth: '300'});
+
+            
+                var html_9717ca9a4902436591a83b6a2e22b43c = $('<div id="html_9717ca9a4902436591a83b6a2e22b43c" style="width: 100.0%; height: 100.0%;">Bauernkriegsmuseum Kornmarktkirche</div>')[0];
+                popup_23d5b6d7916040d5bc75b5058458b3aa.setContent(html_9717ca9a4902436591a83b6a2e22b43c);
+            
+
+            marker_056b25b84a5a4de0aecee1cf51d35504.bindPopup(popup_23d5b6d7916040d5bc75b5058458b3aa);
+
+            
+        
+    
+
+            var marker_239d4f61c56746628ba650b1bc9cbac0 = L.marker(
+                [51.20986,10.45468],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6236741398fa4507ba29b0a45c079d89);
+            
+    
+
+                var icon_ffedd9ca6d824d52b7ae5a14384f3f4c = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_239d4f61c56746628ba650b1bc9cbac0.setIcon(icon_ffedd9ca6d824d52b7ae5a14384f3f4c);
+            
+    
+            var popup_1a0a98564b3347eb8e2f9e7cb37a6071 = L.popup({maxWidth: '300'});
+
+            
+                var html_56dd754804e04efeb28f5dbba605de02 = $('<div id="html_56dd754804e04efeb28f5dbba605de02" style="width: 100.0%; height: 100.0%;">Kreiskirchenamt Mühlhausen</div>')[0];
+                popup_1a0a98564b3347eb8e2f9e7cb37a6071.setContent(html_56dd754804e04efeb28f5dbba605de02);
+            
+
+            marker_239d4f61c56746628ba650b1bc9cbac0.bindPopup(popup_1a0a98564b3347eb8e2f9e7cb37a6071);
+
+            
+        
+    
+
+            var marker_f3feccd5cd374323b7c38d74fb03fae9 = L.marker(
+                [51.1209708,10.423281],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6236741398fa4507ba29b0a45c079d89);
+            
+    
+
+                var icon_8b9e25ae641b4305bd78e488a2cbf090 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_f3feccd5cd374323b7c38d74fb03fae9.setIcon(icon_8b9e25ae641b4305bd78e488a2cbf090);
+            
+    
+            var popup_43caa583289a4df68b0973aa2e320088 = L.popup({maxWidth: '300'});
+
+            
+                var html_f76deeeb0f69404ea71d9e3b4bfec4a6 = $('<div id="html_f76deeeb0f69404ea71d9e3b4bfec4a6" style="width: 100.0%; height: 100.0%;">Nationalparkausstellung</div>')[0];
+                popup_43caa583289a4df68b0973aa2e320088.setContent(html_f76deeeb0f69404ea71d9e3b4bfec4a6);
+            
+
+            marker_f3feccd5cd374323b7c38d74fb03fae9.bindPopup(popup_43caa583289a4df68b0973aa2e320088);
+
+            
+        
+    
+
+            var marker_308f971e358a401b9b1c3f3cc5c109e9 = L.marker(
+                [51.2124049,10.4606023],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6236741398fa4507ba29b0a45c079d89);
+            
+    
+
+                var icon_4e9b584fad4b4d8c99b56e2806854f7c = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_308f971e358a401b9b1c3f3cc5c109e9.setIcon(icon_4e9b584fad4b4d8c99b56e2806854f7c);
+            
+    
+            var popup_ca445b63f295425489a935c405f66ab6 = L.popup({maxWidth: '300'});
+
+            
+                var html_8490396bbf464bdda0b6579bf1a5d142 = $('<div id="html_8490396bbf464bdda0b6579bf1a5d142" style="width: 100.0%; height: 100.0%;">Fernmelde-Museum</div>')[0];
+                popup_ca445b63f295425489a935c405f66ab6.setContent(html_8490396bbf464bdda0b6579bf1a5d142);
+            
+
+            marker_308f971e358a401b9b1c3f3cc5c109e9.bindPopup(popup_ca445b63f295425489a935c405f66ab6);
+
+            
+        
+    
+
+            var marker_bba66147d9a048dbbe72dc9a9b5d5f1e = L.marker(
+                [51.2098394,10.4514844],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6236741398fa4507ba29b0a45c079d89);
+            
+    
+
+                var icon_0eb173c6571744cca32e22ba72008d1a = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_bba66147d9a048dbbe72dc9a9b5d5f1e.setIcon(icon_0eb173c6571744cca32e22ba72008d1a);
+            
+    
+            var popup_e94af78c2125441f897c5a883b11b030 = L.popup({maxWidth: '300'});
+
+            
+                var html_ea844ed7695f4466a69cd5370c141b95 = $('<div id="html_ea844ed7695f4466a69cd5370c141b95" style="width: 100.0%; height: 100.0%;">Historische Wehranlage</div>')[0];
+                popup_e94af78c2125441f897c5a883b11b030.setContent(html_ea844ed7695f4466a69cd5370c141b95);
+            
+
+            marker_bba66147d9a048dbbe72dc9a9b5d5f1e.bindPopup(popup_e94af78c2125441f897c5a883b11b030);
+
+            
+        
+    
+
+            var marker_1bef6df16be94ff3abd06648a2d231c5 = L.marker(
+                [51.149862,10.5692123],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6236741398fa4507ba29b0a45c079d89);
+            
+    
+
+                var icon_f84043a511ca41b1a58fa5906ed3517e = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_1bef6df16be94ff3abd06648a2d231c5.setIcon(icon_f84043a511ca41b1a58fa5906ed3517e);
+            
+    
+            var popup_f451c50d6f5f4cfba98d444ef2f2663b = L.popup({maxWidth: '300'});
+
+            
+                var html_98f0cef5c75e4211a015c92cb35fe7f8 = $('<div id="html_98f0cef5c75e4211a015c92cb35fe7f8" style="width: 100.0%; height: 100.0%;">Dorfmuseum</div>')[0];
+                popup_f451c50d6f5f4cfba98d444ef2f2663b.setContent(html_98f0cef5c75e4211a015c92cb35fe7f8);
+            
+
+            marker_1bef6df16be94ff3abd06648a2d231c5.bindPopup(popup_f451c50d6f5f4cfba98d444ef2f2663b);
+
+            
+        
+    
+
+            var marker_029930ce1558437a8021801f3a713860 = L.marker(
+                [51.1622797,10.4486674],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6236741398fa4507ba29b0a45c079d89);
+            
+    
+
+                var icon_9d6ae41430d04e0b8f09ca376adcd495 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_029930ce1558437a8021801f3a713860.setIcon(icon_9d6ae41430d04e0b8f09ca376adcd495);
+            
+    
+            var popup_f963990b4ec14d7bbdeebc24c92a41b6 = L.popup({maxWidth: '300'});
+
+            
+                var html_ba986ae03a9b46628215a095d47db8e7 = $('<div id="html_ba986ae03a9b46628215a095d47db8e7" style="width: 100.0%; height: 100.0%;">Ausstellung Opfermoor Vogtei</div>')[0];
+                popup_f963990b4ec14d7bbdeebc24c92a41b6.setContent(html_ba986ae03a9b46628215a095d47db8e7);
+            
+
+            marker_029930ce1558437a8021801f3a713860.bindPopup(popup_f963990b4ec14d7bbdeebc24c92a41b6);
+
+            
+        
+    
+
+            var marker_521074be59c743a0a9851e99ea589ff5 = L.marker(
+                [51.1700309,10.4745583],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6236741398fa4507ba29b0a45c079d89);
+            
+    
+
+                var icon_0ae4071729e54afca681dec2daabafa5 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_521074be59c743a0a9851e99ea589ff5.setIcon(icon_0ae4071729e54afca681dec2daabafa5);
+            
+    
+            var popup_e879e14b6695490cbea3ce1a481d330d = L.popup({maxWidth: '300'});
+
+            
+                var html_400fe552e63a4f1387b85a6922bf1b96 = $('<div id="html_400fe552e63a4f1387b85a6922bf1b96" style="width: 100.0%; height: 100.0%;">Duits Hotel</div>')[0];
+                popup_e879e14b6695490cbea3ce1a481d330d.setContent(html_400fe552e63a4f1387b85a6922bf1b96);
+            
+
+            marker_521074be59c743a0a9851e99ea589ff5.bindPopup(popup_e879e14b6695490cbea3ce1a481d330d);
+
+            
+        
+    
+
+            var marker_324b512f83fe433194ce794dbcf0ca15 = L.marker(
+                [51.1653448,10.4193078],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6236741398fa4507ba29b0a45c079d89);
+            
+    
+
+                var icon_d847d8ae9f3c405a8751744bd9553dcc = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_324b512f83fe433194ce794dbcf0ca15.setIcon(icon_d847d8ae9f3c405a8751744bd9553dcc);
+            
+    
+            var popup_58c41848dc00423fb36a3abfaddc807f = L.popup({maxWidth: '300'});
+
+            
+                var html_ecb02aabf86c4357985165fc9c173e82 = $('<div id="html_ecb02aabf86c4357985165fc9c173e82" style="width: 100.0%; height: 100.0%;">Heimatmuseum Oberdorla</div>')[0];
+                popup_58c41848dc00423fb36a3abfaddc807f.setContent(html_ecb02aabf86c4357985165fc9c173e82);
+            
+
+            marker_324b512f83fe433194ce794dbcf0ca15.bindPopup(popup_58c41848dc00423fb36a3abfaddc807f);
+
+            
+        
+    
+
+            var marker_64c8f3ee742b45d58005aa2a8b19e225 = L.marker(
+                [51.1630861,10.508387],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6236741398fa4507ba29b0a45c079d89);
+            
+    
+
+                var icon_ae0348c68e0c41db9d002b08cff0e3d5 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_64c8f3ee742b45d58005aa2a8b19e225.setIcon(icon_ae0348c68e0c41db9d002b08cff0e3d5);
+            
+    
+            var popup_2626ce02244f4eaa94e90e184baa6fc1 = L.popup({maxWidth: '300'});
+
+            
+                var html_bc8fa09cbfc4459dbaaedda63af915d7 = $('<div id="html_bc8fa09cbfc4459dbaaedda63af915d7" style="width: 100.0%; height: 100.0%;">EL TESORO DE WILLY</div>')[0];
+                popup_2626ce02244f4eaa94e90e184baa6fc1.setContent(html_bc8fa09cbfc4459dbaaedda63af915d7);
+            
+
+            marker_64c8f3ee742b45d58005aa2a8b19e225.bindPopup(popup_2626ce02244f4eaa94e90e184baa6fc1);
+
+            
+        
+    
+
+            var marker_82f241c091ef413182f83633f63c58a5 = L.marker(
+                [51.2034238,10.4661609],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6236741398fa4507ba29b0a45c079d89);
+            
+    
+
+                var icon_59c356093c8c4985b5a107004215031c = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_82f241c091ef413182f83633f63c58a5.setIcon(icon_59c356093c8c4985b5a107004215031c);
+            
+    
+            var popup_bb595f9271b74ff9a6efc8f3a618b74b = L.popup({maxWidth: '300'});
+
+            
+                var html_efeee4448579471e9d6f71d1204d64b6 = $('<div id="html_efeee4448579471e9d6f71d1204d64b6" style="width: 100.0%; height: 100.0%;">Mahari Tesfay</div>')[0];
+                popup_bb595f9271b74ff9a6efc8f3a618b74b.setContent(html_efeee4448579471e9d6f71d1204d64b6);
+            
+
+            marker_82f241c091ef413182f83633f63c58a5.bindPopup(popup_bb595f9271b74ff9a6efc8f3a618b74b);
+
+            
+        
+    
+
+            var marker_fad8c48dddda48309e90d1d3cdb4ee38 = L.marker(
+                [51.1938013,10.3993056],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6236741398fa4507ba29b0a45c079d89);
+            
+    
+
+                var icon_974fc81b34c2478a9127a28c79ba241a = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_fad8c48dddda48309e90d1d3cdb4ee38.setIcon(icon_974fc81b34c2478a9127a28c79ba241a);
+            
+    
+            var popup_1a1fa6acdc334d64bacb5a30eba8cd87 = L.popup({maxWidth: '300'});
+
+            
+                var html_09d2154250b54474bee6ca39e4006fc6 = $('<div id="html_09d2154250b54474bee6ca39e4006fc6" style="width: 100.0%; height: 100.0%;">B-Lager</div>')[0];
+                popup_1a1fa6acdc334d64bacb5a30eba8cd87.setContent(html_09d2154250b54474bee6ca39e4006fc6);
+            
+
+            marker_fad8c48dddda48309e90d1d3cdb4ee38.bindPopup(popup_1a1fa6acdc334d64bacb5a30eba8cd87);
+
+            
+        
+    
+
+            var marker_7b7f29c15bf248bb8b302ff1030a161d = L.marker(
+                [51.2093544,10.4645075],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6236741398fa4507ba29b0a45c079d89);
+            
+    
+
+                var icon_50a3b148a64e4ff1819b9a0a2265af55 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_7b7f29c15bf248bb8b302ff1030a161d.setIcon(icon_50a3b148a64e4ff1819b9a0a2265af55);
+            
+    
+            var popup_6403f0238d65428fb04d457480657d6e = L.popup({maxWidth: '300'});
+
+            
+                var html_55dbf1b932844907a89af2e8b1bcabcb = $('<div id="html_55dbf1b932844907a89af2e8b1bcabcb" style="width: 100.0%; height: 100.0%;">Persiluhr</div>')[0];
+                popup_6403f0238d65428fb04d457480657d6e.setContent(html_55dbf1b932844907a89af2e8b1bcabcb);
+            
+
+            marker_7b7f29c15bf248bb8b302ff1030a161d.bindPopup(popup_6403f0238d65428fb04d457480657d6e);
+
+            
+        
+    
+
+            var marker_dac072462e084747955c8f66ea522626 = L.marker(
+                [51.2104745,10.4544548],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6236741398fa4507ba29b0a45c079d89);
+            
+    
+
+                var icon_d56a4b3028304411b4f003b542169430 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_dac072462e084747955c8f66ea522626.setIcon(icon_d56a4b3028304411b4f003b542169430);
+            
+    
+            var popup_c2ccab3bd69742c19035822a4eee58ed = L.popup({maxWidth: '300'});
+
+            
+                var html_c80bcbbbc96e4ad59ca8d8f5568dd4b5 = $('<div id="html_c80bcbbbc96e4ad59ca8d8f5568dd4b5" style="width: 100.0%; height: 100.0%;">Alte Post</div>')[0];
+                popup_c2ccab3bd69742c19035822a4eee58ed.setContent(html_c80bcbbbc96e4ad59ca8d8f5568dd4b5);
+            
+
+            marker_dac072462e084747955c8f66ea522626.bindPopup(popup_c2ccab3bd69742c19035822a4eee58ed);
+
+            
+        
+    
+
+            var marker_e6cf5ea3d93a45869d0ab9fc10f3b993 = L.marker(
+                [51.2123588,10.4606121],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6236741398fa4507ba29b0a45c079d89);
+            
+    
+
+                var icon_ac700ebde90a446eaae3316c3de222f6 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_e6cf5ea3d93a45869d0ab9fc10f3b993.setIcon(icon_ac700ebde90a446eaae3316c3de222f6);
+            
+    
+            var popup_0aa1e156592941c7a8a7c29508d14b85 = L.popup({maxWidth: '300'});
+
+            
+                var html_8ea0408d97264f1f8224d590efd3c38b = $('<div id="html_8ea0408d97264f1f8224d590efd3c38b" style="width: 100.0%; height: 100.0%;">Telekommunikationsmuseum</div>')[0];
+                popup_0aa1e156592941c7a8a7c29508d14b85.setContent(html_8ea0408d97264f1f8224d590efd3c38b);
+            
+
+            marker_e6cf5ea3d93a45869d0ab9fc10f3b993.bindPopup(popup_0aa1e156592941c7a8a7c29508d14b85);
+
+            
+        
+</script>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS = false; L_NO_TOUCH = false; L_DISABLE_3D = false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <style> #map_60af5ba34c9742b292de4895733654ad {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_60af5ba34c9742b292de4895733654ad" ></div>
+        
+</body>
+<script>    
+    
+
+            
+                var bounds = null;
+            
+
+            var map_60af5ba34c9742b292de4895733654ad = L.map(
+                                  'map_60af5ba34c9742b292de4895733654ad',
+                                  {center: [50.503887,4.469936],
+                                  zoom: 12,
+                                  maxBounds: bounds,
+                                  layers: [],
+                                  worldCopyJump: false,
+                                  crs: L.CRS.EPSG3857
+                                 });
+            
+        
+    
+            var tile_layer_b2a821104d414f688659055e7ccd80e4 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null, 
+  "detectRetina": false, 
+  "maxZoom": 18, 
+  "minZoom": 1, 
+  "noWrap": false, 
+  "subdomains": "abc"
+}
+                ).addTo(map_60af5ba34c9742b292de4895733654ad);
+        
+    
+
+            var marker_206bb0a07cbb485abc7478f6e3b91f5d = L.marker(
+                [50.5140781,4.5799117],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_60af5ba34c9742b292de4895733654ad);
+            
+    
+
+                var icon_fb1a21f93fcb40e3bbf6d657de4fb297 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_206bb0a07cbb485abc7478f6e3b91f5d.setIcon(icon_fb1a21f93fcb40e3bbf6d657de4fb297);
+            
+    
+            var popup_13f62de3a5df4395b7a4886ef53889dd = L.popup({maxWidth: '300'});
+
+            
+                var html_037d8e9341dd4d31a568c43c1c48ac9f = $('<div id="html_037d8e9341dd4d31a568c43c1c48ac9f" style="width: 100.0%; height: 100.0%;">Centre Général Gérard LIGNY</div>')[0];
+                popup_13f62de3a5df4395b7a4886ef53889dd.setContent(html_037d8e9341dd4d31a568c43c1c48ac9f);
+            
+
+            marker_206bb0a07cbb485abc7478f6e3b91f5d.bindPopup(popup_13f62de3a5df4395b7a4886ef53889dd);
+
+            
+        
+    
+
+            var marker_17e3c506147d4c85ac481148b59e34a2 = L.marker(
+                [50.4166996,4.4463786],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_60af5ba34c9742b292de4895733654ad);
+            
+    
+
+                var icon_c809825d5f514de996939e0d649f6a33 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_17e3c506147d4c85ac481148b59e34a2.setIcon(icon_c809825d5f514de996939e0d649f6a33);
+            
+    
+            var popup_fe4d26b9905f4b5ab4e0997a6a184de4 = L.popup({maxWidth: '300'});
+
+            
+                var html_01dfac0455aa45b9b9775852ffca43f5 = $('<div id="html_01dfac0455aa45b9b9775852ffca43f5" style="width: 100.0%; height: 100.0%;">BPS22</div>')[0];
+                popup_fe4d26b9905f4b5ab4e0997a6a184de4.setContent(html_01dfac0455aa45b9b9775852ffca43f5);
+            
+
+            marker_17e3c506147d4c85ac481148b59e34a2.bindPopup(popup_fe4d26b9905f4b5ab4e0997a6a184de4);
+
+            
+        
+    
+
+            var marker_af0a66abfa3f40a3b0ee286867c4c27c = L.marker(
+                [50.5389247,4.4125046],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_60af5ba34c9742b292de4895733654ad);
+            
+    
+
+                var icon_826b7bbd860d48d1b1a185c2e0464606 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_af0a66abfa3f40a3b0ee286867c4c27c.setIcon(icon_826b7bbd860d48d1b1a185c2e0464606);
+            
+    
+            var popup_e655c2eca93b460a857a40c99002b92e = L.popup({maxWidth: '300'});
+
+            
+                var html_76d8a2512118465488e50b17fae9389d = $('<div id="html_76d8a2512118465488e50b17fae9389d" style="width: 100.0%; height: 100.0%;">Cercle Historique et Archéologique Rodava Asbl</div>')[0];
+                popup_e655c2eca93b460a857a40c99002b92e.setContent(html_76d8a2512118465488e50b17fae9389d);
+            
+
+            marker_af0a66abfa3f40a3b0ee286867c4c27c.bindPopup(popup_e655c2eca93b460a857a40c99002b92e);
+
+            
+        
+    
+
+            var marker_0bd8fc7fd2364e92b1d31440d5094e71 = L.marker(
+                [50.4761605,4.5814168],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_60af5ba34c9742b292de4895733654ad);
+            
+    
+
+                var icon_b9431db698374eacb9ba87fc045ae88a = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_0bd8fc7fd2364e92b1d31440d5094e71.setIcon(icon_b9431db698374eacb9ba87fc045ae88a);
+            
+    
+            var popup_e8aa08bdf4e14672a0ce5f0b63be6955 = L.popup({maxWidth: '300'});
+
+            
+                var html_809b0ab24b294a149927579ef8f58463 = $('<div id="html_809b0ab24b294a149927579ef8f58463" style="width: 100.0%; height: 100.0%;">Cimetière de Wanfercée-Baulet</div>')[0];
+                popup_e8aa08bdf4e14672a0ce5f0b63be6955.setContent(html_809b0ab24b294a149927579ef8f58463);
+            
+
+            marker_0bd8fc7fd2364e92b1d31440d5094e71.bindPopup(popup_e8aa08bdf4e14672a0ce5f0b63be6955);
+
+            
+        
+    
+
+            var marker_c2de922d61744a7f9a37142bf385678d = L.marker(
+                [50.434348,4.5383012],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_60af5ba34c9742b292de4895733654ad);
+            
+    
+
+                var icon_de43b30605774d11aec5cf097877d10c = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_c2de922d61744a7f9a37142bf385678d.setIcon(icon_de43b30605774d11aec5cf097877d10c);
+            
+    
+            var popup_3054fb973ec74d20b0550b8ef4721894 = L.popup({maxWidth: '300'});
+
+            
+                var html_f2cbcf4c50744dd3b1536a0061bb0142 = $('<div id="html_f2cbcf4c50744dd3b1536a0061bb0142" style="width: 100.0%; height: 100.0%;">charbonnage du roton</div>')[0];
+                popup_3054fb973ec74d20b0550b8ef4721894.setContent(html_f2cbcf4c50744dd3b1536a0061bb0142);
+            
+
+            marker_c2de922d61744a7f9a37142bf385678d.bindPopup(popup_3054fb973ec74d20b0550b8ef4721894);
+
+            
+        
+</script>

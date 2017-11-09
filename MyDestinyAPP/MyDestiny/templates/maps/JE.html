@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS = false; L_NO_TOUCH = false; L_DISABLE_3D = false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <style> #map_9d20fe5bf8054dbca3b3300e7403f02d {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_9d20fe5bf8054dbca3b3300e7403f02d" ></div>
+        
+</body>
+<script>    
+    
+
+            
+                var bounds = null;
+            
+
+            var map_9d20fe5bf8054dbca3b3300e7403f02d = L.map(
+                                  'map_9d20fe5bf8054dbca3b3300e7403f02d',
+                                  {center: [49.214439,-2.13125],
+                                  zoom: 12,
+                                  maxBounds: bounds,
+                                  layers: [],
+                                  worldCopyJump: false,
+                                  crs: L.CRS.EPSG3857
+                                 });
+            
+        
+    
+            var tile_layer_ccd039cd73fa4eb880ce5531a28d3608 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null, 
+  "detectRetina": false, 
+  "maxZoom": 18, 
+  "minZoom": 1, 
+  "noWrap": false, 
+  "subdomains": "abc"
+}
+                ).addTo(map_9d20fe5bf8054dbca3b3300e7403f02d);
+        
+    
+
+            var marker_1718da6e9daf4c4e976c283b8d87dcb3 = L.marker(
+                [49.1815334,-2.1100303],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_9d20fe5bf8054dbca3b3300e7403f02d);
+            
+    
+
+                var icon_1ec95f30be754fff80129a663f79ef62 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_1718da6e9daf4c4e976c283b8d87dcb3.setIcon(icon_1ec95f30be754fff80129a663f79ef62);
+            
+    
+            var popup_a7732de4262142708862459a4d67480f = L.popup({maxWidth: '300'});
+
+            
+                var html_ec30e25310fb455b8261c6859b768b1d = $('<div id="html_ec30e25310fb455b8261c6859b768b1d" style="width: 100.0%; height: 100.0%;">Maritime Museum</div>')[0];
+                popup_a7732de4262142708862459a4d67480f.setContent(html_ec30e25310fb455b8261c6859b768b1d);
+            
+
+            marker_1718da6e9daf4c4e976c283b8d87dcb3.bindPopup(popup_a7732de4262142708862459a4d67480f);
+
+            
+        
+    
+
+            var marker_c81cf5fbab2b42ceb2569a3952328c78 = L.marker(
+                [49.224662,-2.135909],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_9d20fe5bf8054dbca3b3300e7403f02d);
+            
+    
+
+                var icon_4834107eb58e447baed649846162ba46 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_c81cf5fbab2b42ceb2569a3952328c78.setIcon(icon_4834107eb58e447baed649846162ba46);
+            
+    
+            var popup_689f39a86cb34d6cb9991fe107d9d94f = L.popup({maxWidth: '300'});
+
+            
+                var html_0e0c7aa29f5e44248acd9eec3280ab5c = $('<div id="html_0e0c7aa29f5e44248acd9eec3280ab5c" style="width: 100.0%; height: 100.0%;">Hamptonne Country Life Museum</div>')[0];
+                popup_689f39a86cb34d6cb9991fe107d9d94f.setContent(html_0e0c7aa29f5e44248acd9eec3280ab5c);
+            
+
+            marker_c81cf5fbab2b42ceb2569a3952328c78.bindPopup(popup_689f39a86cb34d6cb9991fe107d9d94f);
+
+            
+        
+    
+
+            var marker_3e53699e050143ebbbdbe4f640dbdf7b = L.marker(
+                [49.182601,-2.107164],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_9d20fe5bf8054dbca3b3300e7403f02d);
+            
+    
+
+                var icon_eb7af9ab91e54e41a552bf8d846b6f72 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_3e53699e050143ebbbdbe4f640dbdf7b.setIcon(icon_eb7af9ab91e54e41a552bf8d846b6f72);
+            
+    
+            var popup_7abe988145354a63bd80607c383c4bd1 = L.popup({maxWidth: '300'});
+
+            
+                var html_8f6d29f57c964531bcb7b8f4bbc54635 = $('<div id="html_8f6d29f57c964531bcb7b8f4bbc54635" style="width: 100.0%; height: 100.0%;">Jersey Museum & Art Gallery, Merchant's House</div>')[0];
+                popup_7abe988145354a63bd80607c383c4bd1.setContent(html_8f6d29f57c964531bcb7b8f4bbc54635);
+            
+
+            marker_3e53699e050143ebbbdbe4f640dbdf7b.bindPopup(popup_7abe988145354a63bd80607c383c4bd1);
+
+            
+        
+    
+
+            var marker_c39e8afd1c694d78b2540da4299df361 = L.marker(
+                [49.173787,-2.0777274],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_9d20fe5bf8054dbca3b3300e7403f02d);
+            
+    
+
+                var icon_195c0b2cf99949719f21455282e113f9 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_c39e8afd1c694d78b2540da4299df361.setIcon(icon_195c0b2cf99949719f21455282e113f9);
+            
+    
+            var popup_12a330aed1a94f9e95e3b60ee78128ff = L.popup({maxWidth: '300'});
+
+            
+                var html_9c92786038e344bda1a1bf7112dc540c = $('<div id="html_9c92786038e344bda1a1bf7112dc540c" style="width: 100.0%; height: 100.0%;">Samarès Manor</div>')[0];
+                popup_12a330aed1a94f9e95e3b60ee78128ff.setContent(html_9c92786038e344bda1a1bf7112dc540c);
+            
+
+            marker_c39e8afd1c694d78b2540da4299df361.bindPopup(popup_12a330aed1a94f9e95e3b60ee78128ff);
+
+            
+        
+    
+
+            var marker_09433c0d340e4cf09b16ea4d9c906232 = L.marker(
+                [49.2005184,-2.064301],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_9d20fe5bf8054dbca3b3300e7403f02d);
+            
+    
+
+                var icon_5c5b3e2f6809477ab87cf917423ec808 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_09433c0d340e4cf09b16ea4d9c906232.setIcon(icon_5c5b3e2f6809477ab87cf917423ec808);
+            
+    
+            var popup_8052284524624e01800f6b8e6b2e74e3 = L.popup({maxWidth: '300'});
+
+            
+                var html_d2415c8be25945bd99987cc34bdeabc5 = $('<div id="html_d2415c8be25945bd99987cc34bdeabc5" style="width: 100.0%; height: 100.0%;">La Hougue Bie Museum</div>')[0];
+                popup_8052284524624e01800f6b8e6b2e74e3.setContent(html_d2415c8be25945bd99987cc34bdeabc5);
+            
+
+            marker_09433c0d340e4cf09b16ea4d9c906232.bindPopup(popup_8052284524624e01800f6b8e6b2e74e3);
+
+            
+        
+    
+
+            var marker_99e2912c48f0452d8749c8a3192c7614 = L.marker(
+                [49.193701,-2.126312],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_9d20fe5bf8054dbca3b3300e7403f02d);
+            
+    
+
+                var icon_e39107dfa36a4fb29ecb25a3475ee5d1 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_99e2912c48f0452d8749c8a3192c7614.setIcon(icon_e39107dfa36a4fb29ecb25a3475ee5d1);
+            
+    
+            var popup_fdecdba6e8fd4a1e8f511399f2012a85 = L.popup({maxWidth: '300'});
+
+            
+                var html_6042a561cc2e455cabe925d6b7bd3318 = $('<div id="html_6042a561cc2e455cabe925d6b7bd3318" style="width: 100.0%; height: 100.0%;">The Mansell Collection and Full Service Centre</div>')[0];
+                popup_fdecdba6e8fd4a1e8f511399f2012a85.setContent(html_6042a561cc2e455cabe925d6b7bd3318);
+            
+
+            marker_99e2912c48f0452d8749c8a3192c7614.bindPopup(popup_fdecdba6e8fd4a1e8f511399f2012a85);
+
+            
+        
+    
+
+            var marker_c8395cd7bf4e45119dea97e556146379 = L.marker(
+                [49.1852098,-2.1067813],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_9d20fe5bf8054dbca3b3300e7403f02d);
+            
+    
+
+                var icon_60710f7246b14caf8e237b3209aa2151 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_c8395cd7bf4e45119dea97e556146379.setIcon(icon_60710f7246b14caf8e237b3209aa2151);
+            
+    
+            var popup_e2a457fc06464bbe958470f0da89d661 = L.popup({maxWidth: '300'});
+
+            
+                var html_a58c3e7d9e1d4f8ebcb454b542f477be = $('<div id="html_a58c3e7d9e1d4f8ebcb454b542f477be" style="width: 100.0%; height: 100.0%;">16 New Street</div>')[0];
+                popup_e2a457fc06464bbe958470f0da89d661.setContent(html_a58c3e7d9e1d4f8ebcb454b542f477be);
+            
+
+            marker_c8395cd7bf4e45119dea97e556146379.bindPopup(popup_e2a457fc06464bbe958470f0da89d661);
+
+            
+        
+    
+
+            var marker_299bf6803d014ca79b4187a89c1e001b = L.marker(
+                [49.225004,-2.1061563],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_9d20fe5bf8054dbca3b3300e7403f02d);
+            
+    
+
+                var icon_5af4de269e0f415cb65e5873f4a2314a = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_299bf6803d014ca79b4187a89c1e001b.setIcon(icon_5af4de269e0f415cb65e5873f4a2314a);
+            
+    
+            var popup_6939dc245ecd473388d9bec05b21e5a0 = L.popup({maxWidth: '300'});
+
+            
+                var html_0bb58ae95ccc41b2b461cf38e0a8ec62 = $('<div id="html_0bb58ae95ccc41b2b461cf38e0a8ec62" style="width: 100.0%; height: 100.0%;">Steam Motor & General Museum</div>')[0];
+                popup_6939dc245ecd473388d9bec05b21e5a0.setContent(html_0bb58ae95ccc41b2b461cf38e0a8ec62);
+            
+
+            marker_299bf6803d014ca79b4187a89c1e001b.bindPopup(popup_6939dc245ecd473388d9bec05b21e5a0);
+
+            
+        
+    
+
+            var marker_84ca43de539a468a939619fb8d7af7f1 = L.marker(
+                [49.2023796,-2.051469],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_9d20fe5bf8054dbca3b3300e7403f02d);
+            
+    
+
+                var icon_6a0e5cb987bf4f2e849e5eb88696e164 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_84ca43de539a468a939619fb8d7af7f1.setIcon(icon_6a0e5cb987bf4f2e849e5eb88696e164);
+            
+    
+            var popup_5720387480b64684bf92796c82566303 = L.popup({maxWidth: '300'});
+
+            
+                var html_de0caf3b9a8c4800beaefc229b8647fc = $('<div id="html_de0caf3b9a8c4800beaefc229b8647fc" style="width: 100.0%; height: 100.0%;">La Hougue Bie Museum</div>')[0];
+                popup_5720387480b64684bf92796c82566303.setContent(html_de0caf3b9a8c4800beaefc229b8647fc);
+            
+
+            marker_84ca43de539a468a939619fb8d7af7f1.bindPopup(popup_5720387480b64684bf92796c82566303);
+
+            
+        
+    
+
+            var marker_2709b8d347f2413f810e40e1f4b3a6e8 = L.marker(
+                [49.2104134,-2.1541142],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_9d20fe5bf8054dbca3b3300e7403f02d);
+            
+    
+
+                var icon_e9adfe64e934443a9e5256fca70e6717 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_2709b8d347f2413f810e40e1f4b3a6e8.setIcon(icon_e9adfe64e934443a9e5256fca70e6717);
+            
+    
+            var popup_ea4c1f35c59b4e4f92c7d9959e866765 = L.popup({maxWidth: '300'});
+
+            
+                var html_c58e4a789f594268aea835a185aaf1cf = $('<div id="html_c58e4a789f594268aea835a185aaf1cf" style="width: 100.0%; height: 100.0%;">German Underground Hospital</div>')[0];
+                popup_ea4c1f35c59b4e4f92c7d9959e866765.setContent(html_c58e4a789f594268aea835a185aaf1cf);
+            
+
+            marker_2709b8d347f2413f810e40e1f4b3a6e8.bindPopup(popup_ea4c1f35c59b4e4f92c7d9959e866765);
+
+            
+        
+    
+
+            var marker_0bb4274d79714ce6babff24c6107d7c4 = L.marker(
+                [49.1756718,-2.1260233],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_9d20fe5bf8054dbca3b3300e7403f02d);
+            
+    
+
+                var icon_eb10d6c6baf9499fae409a86619adfb5 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_0bb4274d79714ce6babff24c6107d7c4.setIcon(icon_eb10d6c6baf9499fae409a86619adfb5);
+            
+    
+            var popup_a4672b13a95647a0ba94a31506955614 = L.popup({maxWidth: '300'});
+
+            
+                var html_17d71f8249364027b2e15cfe8f405ea0 = $('<div id="html_17d71f8249364027b2e15cfe8f405ea0" style="width: 100.0%; height: 100.0%;">The Elizabeth Castle</div>')[0];
+                popup_a4672b13a95647a0ba94a31506955614.setContent(html_17d71f8249364027b2e15cfe8f405ea0);
+            
+
+            marker_0bb4274d79714ce6babff24c6107d7c4.bindPopup(popup_a4672b13a95647a0ba94a31506955614);
+
+            
+        
+    
+
+            var marker_5bff8c67449c4c64be05d75b2d549c0e = L.marker(
+                [49.214439,-2.13125],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_9d20fe5bf8054dbca3b3300e7403f02d);
+            
+    
+
+                var icon_b0f6fc8a391a43bbafa7c4414919a29d = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_5bff8c67449c4c64be05d75b2d549c0e.setIcon(icon_b0f6fc8a391a43bbafa7c4414919a29d);
+            
+    
+            var popup_60d1279f7bd7484e9d2ed59d1c6d2581 = L.popup({maxWidth: '300'});
+
+            
+                var html_0d87a53a570f473caa9c30764d0f0ca4 = $('<div id="html_0d87a53a570f473caa9c30764d0f0ca4" style="width: 100.0%; height: 100.0%;">Phare De La Corbiere</div>')[0];
+                popup_60d1279f7bd7484e9d2ed59d1c6d2581.setContent(html_0d87a53a570f473caa9c30764d0f0ca4);
+            
+
+            marker_5bff8c67449c4c64be05d75b2d549c0e.bindPopup(popup_60d1279f7bd7484e9d2ed59d1c6d2581);
+
+            
+        
+    
+
+            var marker_d65d21448a07417f909879961f245622 = L.marker(
+                [49.2086542,-2.161434],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_9d20fe5bf8054dbca3b3300e7403f02d);
+            
+    
+
+                var icon_7121ddad37d54c65af92e9fec75029d4 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_d65d21448a07417f909879961f245622.setIcon(icon_7121ddad37d54c65af92e9fec75029d4);
+            
+    
+            var popup_6d94f16839014a32ac702574881393f8 = L.popup({maxWidth: '300'});
+
+            
+                var html_8732319e6d5140f2aa5f38c7c664354d = $('<div id="html_8732319e6d5140f2aa5f38c7c664354d" style="width: 100.0%; height: 100.0%;">Le Moulin de Quétivel</div>')[0];
+                popup_6d94f16839014a32ac702574881393f8.setContent(html_8732319e6d5140f2aa5f38c7c664354d);
+            
+
+            marker_d65d21448a07417f909879961f245622.bindPopup(popup_6d94f16839014a32ac702574881393f8);
+
+            
+        
+    
+
+            var marker_6db1c828a3c9413d95a8d3ad72a5b7e1 = L.marker(
+                [49.1853424,-2.099142],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_9d20fe5bf8054dbca3b3300e7403f02d);
+            
+    
+
+                var icon_7218a1e555d9426281ebb03a2733eafa = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_6db1c828a3c9413d95a8d3ad72a5b7e1.setIcon(icon_7218a1e555d9426281ebb03a2733eafa);
+            
+    
+            var popup_86976fde391647efadea5f213b7b5c58 = L.popup({maxWidth: '300'});
+
+            
+                var html_289b976d947047b795c9c14fcca619b0 = $('<div id="html_289b976d947047b795c9c14fcca619b0" style="width: 100.0%; height: 100.0%;">Cimetiere Ancien</div>')[0];
+                popup_86976fde391647efadea5f213b7b5c58.setContent(html_289b976d947047b795c9c14fcca619b0);
+            
+
+            marker_6db1c828a3c9413d95a8d3ad72a5b7e1.bindPopup(popup_86976fde391647efadea5f213b7b5c58);
+
+            
+        
+    
+
+            var marker_5b63c0c6493849e08b0a588bdaea46b1 = L.marker(
+                [49.1894805,-2.1724338],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_9d20fe5bf8054dbca3b3300e7403f02d);
+            
+    
+
+                var icon_3df1b4aec95945499a3212433c2ebc96 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_5b63c0c6493849e08b0a588bdaea46b1.setIcon(icon_3df1b4aec95945499a3212433c2ebc96);
+            
+    
+            var popup_9f8fa16e2ccd44e5a12fb6174c126d26 = L.popup({maxWidth: '300'});
+
+            
+                var html_9dfb1167aeb546648a888724f1706782 = $('<div id="html_9dfb1167aeb546648a888724f1706782" style="width: 100.0%; height: 100.0%;">Batterie Defflinger WWII Bunkers</div>')[0];
+                popup_9f8fa16e2ccd44e5a12fb6174c126d26.setContent(html_9dfb1167aeb546648a888724f1706782);
+            
+
+            marker_5b63c0c6493849e08b0a588bdaea46b1.bindPopup(popup_9f8fa16e2ccd44e5a12fb6174c126d26);
+
+            
+        
+    
+
+            var marker_65c2e1033dea4613862dc68b6e342d77 = L.marker(
+                [49.1829647,-2.0979956],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_9d20fe5bf8054dbca3b3300e7403f02d);
+            
+    
+
+                var icon_1748f91c0d4243c0947e8498dea2cff6 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_65c2e1033dea4613862dc68b6e342d77.setIcon(icon_1748f91c0d4243c0947e8498dea2cff6);
+            
+    
+            var popup_4555bb87d33d47ed80a70fd4b678cc41 = L.popup({maxWidth: '300'});
+
+            
+                var html_d176ac1ad19f45c8979b0f229a6c1cbe = $('<div id="html_d176ac1ad19f45c8979b0f229a6c1cbe" style="width: 100.0%; height: 100.0%;">Jersey Archives</div>')[0];
+                popup_4555bb87d33d47ed80a70fd4b678cc41.setContent(html_d176ac1ad19f45c8979b0f229a6c1cbe);
+            
+
+            marker_65c2e1033dea4613862dc68b6e342d77.bindPopup(popup_4555bb87d33d47ed80a70fd4b678cc41);
+
+            
+        
+    
+
+            var marker_5e1243c38a834444b25fe5e81474a791 = L.marker(
+                [49.1788724,-2.1093577],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_9d20fe5bf8054dbca3b3300e7403f02d);
+            
+    
+
+                var icon_b2419e7907474a898027a84200f18ea9 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_5e1243c38a834444b25fe5e81474a791.setIcon(icon_b2419e7907474a898027a84200f18ea9);
+            
+    
+            var popup_e14b279e005f4a66903673234dcbf579 = L.popup({maxWidth: '300'});
+
+            
+                var html_b30e63d5d4134775ab12135ef139af02 = $('<div id="html_b30e63d5d4134775ab12135ef139af02" style="width: 100.0%; height: 100.0%;">Dazzle Ship Jersey</div>')[0];
+                popup_e14b279e005f4a66903673234dcbf579.setContent(html_b30e63d5d4134775ab12135ef139af02);
+            
+
+            marker_5e1243c38a834444b25fe5e81474a791.bindPopup(popup_e14b279e005f4a66903673234dcbf579);
+
+            
+        
+    
+
+            var marker_79da20cda29e430d88da46e144d0a1de = L.marker(
+                [49.2253834,-2.1985551],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_9d20fe5bf8054dbca3b3300e7403f02d);
+            
+    
+
+                var icon_21d31078ba0b4ccc93176c955e28b9c5 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_79da20cda29e430d88da46e144d0a1de.setIcon(icon_21d31078ba0b4ccc93176c955e28b9c5);
+            
+    
+            var popup_3617fac663ba4527a1aa4389fa9b2581 = L.popup({maxWidth: '300'});
+
+            
+                var html_5b4a6affde9340379425d1ac63166f98 = $('<div id="html_5b4a6affde9340379425d1ac63166f98" style="width: 100.0%; height: 100.0%;">St Ouen Manor</div>')[0];
+                popup_3617fac663ba4527a1aa4389fa9b2581.setContent(html_5b4a6affde9340379425d1ac63166f98);
+            
+
+            marker_79da20cda29e430d88da46e144d0a1de.bindPopup(popup_3617fac663ba4527a1aa4389fa9b2581);
+
+            
+        
+    
+
+            var marker_fe120c026e314ced908d61b113678cfa = L.marker(
+                [49.2369212,-2.2223496],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_9d20fe5bf8054dbca3b3300e7403f02d);
+            
+    
+
+                var icon_3950e0062d5b4a3298153304c3e7d846 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_fe120c026e314ced908d61b113678cfa.setIcon(icon_3950e0062d5b4a3298153304c3e7d846);
+            
+    
+            var popup_45a48cd5429e46169afd3546f5ebd5a7 = L.popup({maxWidth: '300'});
+
+            
+                var html_775f5403dc1e4da1847896b930a5b418 = $('<div id="html_775f5403dc1e4da1847896b930a5b418" style="width: 100.0%; height: 100.0%;">Battle of Flowers Museum (closed)</div>')[0];
+                popup_45a48cd5429e46169afd3546f5ebd5a7.setContent(html_775f5403dc1e4da1847896b930a5b418);
+            
+
+            marker_fe120c026e314ced908d61b113678cfa.bindPopup(popup_45a48cd5429e46169afd3546f5ebd5a7);
+
+            
+        
+    
+
+            var marker_91b8821bc4414db2800714fa23f1b83f = L.marker(
+                [49.229254,-2.234286],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_9d20fe5bf8054dbca3b3300e7403f02d);
+            
+    
+
+                var icon_0d7614ea76e841a78c5ac06c43d99509 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_91b8821bc4414db2800714fa23f1b83f.setIcon(icon_0d7614ea76e841a78c5ac06c43d99509);
+            
+    
+            var popup_601481abd53d4c02bc04206e878a7dc2 = L.popup({maxWidth: '300'});
+
+            
+                var html_aec2087e245047f69e5623fda4076add = $('<div id="html_aec2087e245047f69e5623fda4076add" style="width: 100.0%; height: 100.0%;">Channel Islands Military Museum</div>')[0];
+                popup_601481abd53d4c02bc04206e878a7dc2.setContent(html_aec2087e245047f69e5623fda4076add);
+            
+
+            marker_91b8821bc4414db2800714fa23f1b83f.bindPopup(popup_601481abd53d4c02bc04206e878a7dc2);
+
+            
+        
+</script>

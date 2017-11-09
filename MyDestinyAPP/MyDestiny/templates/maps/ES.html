@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS = false; L_NO_TOUCH = false; L_DISABLE_3D = false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <style> #map_bc8caaa5ed154d0e9c512a72ae161c5f {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_bc8caaa5ed154d0e9c512a72ae161c5f" ></div>
+        
+</body>
+<script>    
+    
+
+            
+                var bounds = null;
+            
+
+            var map_bc8caaa5ed154d0e9c512a72ae161c5f = L.map(
+                                  'map_bc8caaa5ed154d0e9c512a72ae161c5f',
+                                  {center: [40.463667,-3.74922],
+                                  zoom: 12,
+                                  maxBounds: bounds,
+                                  layers: [],
+                                  worldCopyJump: false,
+                                  crs: L.CRS.EPSG3857
+                                 });
+            
+        
+    
+            var tile_layer_d33d6f74a461421eb55098112b833375 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null, 
+  "detectRetina": false, 
+  "maxZoom": 18, 
+  "minZoom": 1, 
+  "noWrap": false, 
+  "subdomains": "abc"
+}
+                ).addTo(map_bc8caaa5ed154d0e9c512a72ae161c5f);
+        
+    
+
+            var marker_adf9f5c07ad34d48bf99f444dd1e6398 = L.marker(
+                [40.4160406,-3.6949254],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_bc8caaa5ed154d0e9c512a72ae161c5f);
+            
+    
+
+                var icon_91ad275874fd44779bdb883eddc870ad = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_adf9f5c07ad34d48bf99f444dd1e6398.setIcon(icon_91ad275874fd44779bdb883eddc870ad);
+            
+    
+            var popup_117844536e16449c8fd6ab64ece46eb9 = L.popup({maxWidth: '300'});
+
+            
+                var html_e7614048c6844a3096e9109d91da3535 = $('<div id="html_e7614048c6844a3096e9109d91da3535" style="width: 100.0%; height: 100.0%;">Thyssen-Bornemisza Museum</div>')[0];
+                popup_117844536e16449c8fd6ab64ece46eb9.setContent(html_e7614048c6844a3096e9109d91da3535);
+            
+
+            marker_adf9f5c07ad34d48bf99f444dd1e6398.bindPopup(popup_117844536e16449c8fd6ab64ece46eb9);
+
+            
+        
+    
+
+            var marker_da34532922674401be2eb01036a1324d = L.marker(
+                [40.4249581,-3.6913352],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_bc8caaa5ed154d0e9c512a72ae161c5f);
+            
+    
+
+                var icon_d8c9949f08114a2b8fb7dda08cacb02c = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_da34532922674401be2eb01036a1324d.setIcon(icon_d8c9949f08114a2b8fb7dda08cacb02c);
+            
+    
+            var popup_31d06bab3c194be8a6cbd426cb504e4d = L.popup({maxWidth: '300'});
+
+            
+                var html_cacd0fbe6834470ca9ad9f4315e0004e = $('<div id="html_cacd0fbe6834470ca9ad9f4315e0004e" style="width: 100.0%; height: 100.0%;">Museo de Cera</div>')[0];
+                popup_31d06bab3c194be8a6cbd426cb504e4d.setContent(html_cacd0fbe6834470ca9ad9f4315e0004e);
+            
+
+            marker_da34532922674401be2eb01036a1324d.bindPopup(popup_31d06bab3c194be8a6cbd426cb504e4d);
+
+            
+        
+    
+
+            var marker_a6aed0dd00834e6e885551855db1305d = L.marker(
+                [40.411112,-3.693571],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_bc8caaa5ed154d0e9c512a72ae161c5f);
+            
+    
+
+                var icon_90585dece23046939295bd7b46aa9d69 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_a6aed0dd00834e6e885551855db1305d.setIcon(icon_90585dece23046939295bd7b46aa9d69);
+            
+    
+            var popup_dc3cfc368d074c5fb46d2bb227cba485 = L.popup({maxWidth: '300'});
+
+            
+                var html_3d615e6ddbd54f07a4b9f175af1f582a = $('<div id="html_3d615e6ddbd54f07a4b9f175af1f582a" style="width: 100.0%; height: 100.0%;">CaixaForum Madrid</div>')[0];
+                popup_dc3cfc368d074c5fb46d2bb227cba485.setContent(html_3d615e6ddbd54f07a4b9f175af1f582a);
+            
+
+            marker_a6aed0dd00834e6e885551855db1305d.bindPopup(popup_dc3cfc368d074c5fb46d2bb227cba485);
+
+            
+        
+    
+
+            var marker_f3c150db6c5d4049988314cf3c9574ad = L.marker(
+                [40.4266721,-3.7110923],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_bc8caaa5ed154d0e9c512a72ae161c5f);
+            
+    
+
+                var icon_7cbecce3e2434635a30c320b9ea62aae = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_f3c150db6c5d4049988314cf3c9574ad.setIcon(icon_7cbecce3e2434635a30c320b9ea62aae);
+            
+    
+            var popup_49507e0f6da74dc496b8109c99b18c4b = L.popup({maxWidth: '300'});
+
+            
+                var html_c21ae66f6a8e4b04928e45460685a097 = $('<div id="html_c21ae66f6a8e4b04928e45460685a097" style="width: 100.0%; height: 100.0%;">Conde Duque Cultural Center</div>')[0];
+                popup_49507e0f6da74dc496b8109c99b18c4b.setContent(html_c21ae66f6a8e4b04928e45460685a097);
+            
+
+            marker_f3c150db6c5d4049988314cf3c9574ad.bindPopup(popup_49507e0f6da74dc496b8109c99b18c4b);
+
+            
+        
+    
+
+            var marker_e19aa4c4c073460b94956e524dc0bf7b = L.marker(
+                [40.425889,-3.6987766],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_bc8caaa5ed154d0e9c512a72ae161c5f);
+            
+    
+
+                var icon_0b7a003cd39e4f4eb14b64bf45abc8a4 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_e19aa4c4c073460b94956e524dc0bf7b.setIcon(icon_0b7a003cd39e4f4eb14b64bf45abc8a4);
+            
+    
+            var popup_54b3361703c54f6b9f4e05bed8ec0551 = L.popup({maxWidth: '300'});
+
+            
+                var html_68249c7d76d54d8b9f285d1e39e129eb = $('<div id="html_68249c7d76d54d8b9f285d1e39e129eb" style="width: 100.0%; height: 100.0%;">National Museum of Romanticism</div>')[0];
+                popup_54b3361703c54f6b9f4e05bed8ec0551.setContent(html_68249c7d76d54d8b9f285d1e39e129eb);
+            
+
+            marker_e19aa4c4c073460b94956e524dc0bf7b.bindPopup(popup_54b3361703c54f6b9f4e05bed8ec0551);
+
+            
+        
+    
+
+            var marker_8abb9dabfb6041a4b2c1c751c35d3c53 = L.marker(
+                [40.4079123,-3.6945569],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_bc8caaa5ed154d0e9c512a72ae161c5f);
+            
+    
+
+                var icon_14943db7fc4c442ea7fef312eec97378 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_8abb9dabfb6041a4b2c1c751c35d3c53.setIcon(icon_14943db7fc4c442ea7fef312eec97378);
+            
+    
+            var popup_f56f79c3134542d6a221eda4afb9a578 = L.popup({maxWidth: '300'});
+
+            
+                var html_3636de5e205e46398877ebf150ce48fa = $('<div id="html_3636de5e205e46398877ebf150ce48fa" style="width: 100.0%; height: 100.0%;">Museo Nacional Centro de Arte Reina Sofía</div>')[0];
+                popup_f56f79c3134542d6a221eda4afb9a578.setContent(html_3636de5e205e46398877ebf150ce48fa);
+            
+
+            marker_8abb9dabfb6041a4b2c1c751c35d3c53.bindPopup(popup_f56f79c3134542d6a221eda4afb9a578);
+
+            
+        
+    
+
+            var marker_2146888858734105afb089073c6897b4 = L.marker(
+                [40.4404418,-3.6896172],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_bc8caaa5ed154d0e9c512a72ae161c5f);
+            
+    
+
+                var icon_27a59b24ba6b4843aa9156b984c35234 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_2146888858734105afb089073c6897b4.setIcon(icon_27a59b24ba6b4843aa9156b984c35234);
+            
+    
+            var popup_bc731b100340472f9fc96deb3381087d = L.popup({maxWidth: '300'});
+
+            
+                var html_04778ee82fa8433d9bb451b3478204c7 = $('<div id="html_04778ee82fa8433d9bb451b3478204c7" style="width: 100.0%; height: 100.0%;">Museo Nacional de Ciencias Naturales</div>')[0];
+                popup_bc731b100340472f9fc96deb3381087d.setContent(html_04778ee82fa8433d9bb451b3478204c7);
+            
+
+            marker_2146888858734105afb089073c6897b4.bindPopup(popup_bc731b100340472f9fc96deb3381087d);
+
+            
+        
+    
+
+            var marker_776b5b19e70d406d9e69bcf1f2a56431 = L.marker(
+                [40.4331085,-3.6877055],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_bc8caaa5ed154d0e9c512a72ae161c5f);
+            
+    
+
+                var icon_b7bbe53309a746b18b60ac90f5cdc529 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_776b5b19e70d406d9e69bcf1f2a56431.setIcon(icon_b7bbe53309a746b18b60ac90f5cdc529);
+            
+    
+            var popup_d31bf768fec3455d84ea0ee8f3d4d0b9 = L.popup({maxWidth: '300'});
+
+            
+                var html_592313ac6a014e5babe39d818b2378d5 = $('<div id="html_592313ac6a014e5babe39d818b2378d5" style="width: 100.0%; height: 100.0%;">Museo de Arte Público</div>')[0];
+                popup_d31bf768fec3455d84ea0ee8f3d4d0b9.setContent(html_592313ac6a014e5babe39d818b2378d5);
+            
+
+            marker_776b5b19e70d406d9e69bcf1f2a56431.bindPopup(popup_d31bf768fec3455d84ea0ee8f3d4d0b9);
+
+            
+        
+    
+
+            var marker_ec38df2b647e48a7a17fb84b279e5ef3 = L.marker(
+                [40.4120743,-3.7108361],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_bc8caaa5ed154d0e9c512a72ae161c5f);
+            
+    
+
+                var icon_d7b4390dc6344ba6a2de71de1433996e = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_ec38df2b647e48a7a17fb84b279e5ef3.setIcon(icon_d7b4390dc6344ba6a2de71de1433996e);
+            
+    
+            var popup_ed99ef782e5d48c9ae9937193aaf2dd5 = L.popup({maxWidth: '300'});
+
+            
+                var html_b4ff3c4ccd474df6b68025a653c05e87 = $('<div id="html_b4ff3c4ccd474df6b68025a653c05e87" style="width: 100.0%; height: 100.0%;">Museo de San Isidro</div>')[0];
+                popup_ed99ef782e5d48c9ae9937193aaf2dd5.setContent(html_b4ff3c4ccd474df6b68025a653c05e87);
+            
+
+            marker_ec38df2b647e48a7a17fb84b279e5ef3.bindPopup(popup_ed99ef782e5d48c9ae9937193aaf2dd5);
+
+            
+        
+    
+
+            var marker_05dffd1521aa4ed7b586c6292f7b81a0 = L.marker(
+                [40.436911,-3.685848],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_bc8caaa5ed154d0e9c512a72ae161c5f);
+            
+    
+
+                var icon_436fa3271e014bea98afe2bd192a62a8 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_05dffd1521aa4ed7b586c6292f7b81a0.setIcon(icon_436fa3271e014bea98afe2bd192a62a8);
+            
+    
+            var popup_4eab2c6130364a948401f2f6f9822045 = L.popup({maxWidth: '300'});
+
+            
+                var html_0a6a7eea06bd4933a037b3cd3ba8fed2 = $('<div id="html_0a6a7eea06bd4933a037b3cd3ba8fed2" style="width: 100.0%; height: 100.0%;">Lázaro Galdiano Museum</div>')[0];
+                popup_4eab2c6130364a948401f2f6f9822045.setContent(html_0a6a7eea06bd4933a037b3cd3ba8fed2);
+            
+
+            marker_05dffd1521aa4ed7b586c6292f7b81a0.bindPopup(popup_4eab2c6130364a948401f2f6f9822045);
+
+            
+        
+    
+
+            var marker_6a6a23dec64545c7865cbfc6a6efef40 = L.marker(
+                [40.4177897,-3.7007098],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_bc8caaa5ed154d0e9c512a72ae161c5f);
+            
+    
+
+                var icon_a3b3551165b44198898b8949ef350e49 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_6a6a23dec64545c7865cbfc6a6efef40.setIcon(icon_a3b3551165b44198898b8949ef350e49);
+            
+    
+            var popup_72bc0e4573a440f7854016ef76278ff7 = L.popup({maxWidth: '300'});
+
+            
+                var html_9c996316702441238f5e9fbb6ce26ec2 = $('<div id="html_9c996316702441238f5e9fbb6ce26ec2" style="width: 100.0%; height: 100.0%;">Real Academia de Bellas Artes de San Fernando</div>')[0];
+                popup_72bc0e4573a440f7854016ef76278ff7.setContent(html_9c996316702441238f5e9fbb6ce26ec2);
+            
+
+            marker_6a6a23dec64545c7865cbfc6a6efef40.bindPopup(popup_72bc0e4573a440f7854016ef76278ff7);
+
+            
+        
+    
+
+            var marker_1e8cfbbf87374f84a92e39de2fea8c2c = L.marker(
+                [40.4401559,-3.7295328],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_bc8caaa5ed154d0e9c512a72ae161c5f);
+            
+    
+
+                var icon_d17d2843f13542f09b833a5f7a5418c5 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_1e8cfbbf87374f84a92e39de2fea8c2c.setIcon(icon_d17d2843f13542f09b833a5f7a5418c5);
+            
+    
+            var popup_4ce43eb9ca2d454fa4e5873d6faac6ff = L.popup({maxWidth: '300'});
+
+            
+                var html_b033a62d05ee429fa0aeb0b245608a77 = $('<div id="html_b033a62d05ee429fa0aeb0b245608a77" style="width: 100.0%; height: 100.0%;">Museo del Traje</div>')[0];
+                popup_4ce43eb9ca2d454fa4e5873d6faac6ff.setContent(html_b033a62d05ee429fa0aeb0b245608a77);
+            
+
+            marker_1e8cfbbf87374f84a92e39de2fea8c2c.bindPopup(popup_4ce43eb9ca2d454fa4e5873d6faac6ff);
+
+            
+        
+    
+
+            var marker_d989ccf31ac242bb88a9ea0e8bbb581b = L.marker(
+                [40.423764,-3.714541],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_bc8caaa5ed154d0e9c512a72ae161c5f);
+            
+    
+
+                var icon_f35e1e5dcb804b3db00489bb3f73bf04 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_d989ccf31ac242bb88a9ea0e8bbb581b.setIcon(icon_f35e1e5dcb804b3db00489bb3f73bf04);
+            
+    
+            var popup_527a0e0c1a944d859d8401063d850e16 = L.popup({maxWidth: '300'});
+
+            
+                var html_921c4b390a3146dca68e199120f42337 = $('<div id="html_921c4b390a3146dca68e199120f42337" style="width: 100.0%; height: 100.0%;">Museo Cerralbo</div>')[0];
+                popup_527a0e0c1a944d859d8401063d850e16.setContent(html_921c4b390a3146dca68e199120f42337);
+            
+
+            marker_d989ccf31ac242bb88a9ea0e8bbb581b.bindPopup(popup_527a0e0c1a944d859d8401063d850e16);
+
+            
+        
+    
+
+            var marker_8378b8c7b1734a188d51e7704d87b863 = L.marker(
+                [40.4226408,-3.6690982],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_bc8caaa5ed154d0e9c512a72ae161c5f);
+            
+    
+
+                var icon_476b2a32b30841019454fb92ff08c549 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_8378b8c7b1734a188d51e7704d87b863.setIcon(icon_476b2a32b30841019454fb92ff08c549);
+            
+    
+            var popup_918043c851cc4e8db957050e4d522a5e = L.popup({maxWidth: '300'});
+
+            
+                var html_2f41443383e84b64a3edd1c9ce4dc1f7 = $('<div id="html_2f41443383e84b64a3edd1c9ce4dc1f7" style="width: 100.0%; height: 100.0%;">Museo Casa De La Moneda</div>')[0];
+                popup_918043c851cc4e8db957050e4d522a5e.setContent(html_2f41443383e84b64a3edd1c9ce4dc1f7);
+            
+
+            marker_8378b8c7b1734a188d51e7704d87b863.bindPopup(popup_918043c851cc4e8db957050e4d522a5e);
+
+            
+        
+    
+
+            var marker_99ae970535a24b12a41ce96dda925a97 = L.marker(
+                [40.3987727,-3.6915246],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_bc8caaa5ed154d0e9c512a72ae161c5f);
+            
+    
+
+                var icon_1eab3df2852548d5ab0c0d938ec8954a = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_99ae970535a24b12a41ce96dda925a97.setIcon(icon_1eab3df2852548d5ab0c0d938ec8954a);
+            
+    
+            var popup_14c26c221cc647c0b64a158b2c9100a5 = L.popup({maxWidth: '300'});
+
+            
+                var html_d468ef985b484cbd8f4d3d654f22741d = $('<div id="html_d468ef985b484cbd8f4d3d654f22741d" style="width: 100.0%; height: 100.0%;">Madrid Railway Museum</div>')[0];
+                popup_14c26c221cc647c0b64a158b2c9100a5.setContent(html_d468ef985b484cbd8f4d3d654f22741d);
+            
+
+            marker_99ae970535a24b12a41ce96dda925a97.bindPopup(popup_14c26c221cc647c0b64a158b2c9100a5);
+
+            
+        
+    
+
+            var marker_0df2d0371e3746fcbd421065e622387a = L.marker(
+                [40.4124194,-3.6920752],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_bc8caaa5ed154d0e9c512a72ae161c5f);
+            
+    
+
+                var icon_d0318681a54e42b3bc291c7bbd27cb9e = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_0df2d0371e3746fcbd421065e622387a.setIcon(icon_d0318681a54e42b3bc291c7bbd27cb9e);
+            
+    
+            var popup_202fbf4bd8ce42f680e66b0632092f34 = L.popup({maxWidth: '300'});
+
+            
+                var html_5ae0fff6c41649f2a2162e6dc3fd7fab = $('<div id="html_5ae0fff6c41649f2a2162e6dc3fd7fab" style="width: 100.0%; height: 100.0%;">Villanueva Pavilion</div>')[0];
+                popup_202fbf4bd8ce42f680e66b0632092f34.setContent(html_5ae0fff6c41649f2a2162e6dc3fd7fab);
+            
+
+            marker_0df2d0371e3746fcbd421065e622387a.bindPopup(popup_202fbf4bd8ce42f680e66b0632092f34);
+
+            
+        
+    
+
+            var marker_487fb24d0cb94caabcae1422cd3f661c = L.marker(
+                [40.4175299,-3.6926346],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_bc8caaa5ed154d0e9c512a72ae161c5f);
+            
+    
+
+                var icon_360a7a91ede3456f8914242ce93e6a2d = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_487fb24d0cb94caabcae1422cd3f661c.setIcon(icon_360a7a91ede3456f8914242ce93e6a2d);
+            
+    
+            var popup_575cfe349a2545bea6e143c781ced6e8 = L.popup({maxWidth: '300'});
+
+            
+                var html_413256819967404580b60d6362106eda = $('<div id="html_413256819967404580b60d6362106eda" style="width: 100.0%; height: 100.0%;">Naval Museum</div>')[0];
+                popup_575cfe349a2545bea6e143c781ced6e8.setContent(html_413256819967404580b60d6362106eda);
+            
+
+            marker_487fb24d0cb94caabcae1422cd3f661c.bindPopup(popup_575cfe349a2545bea6e143c781ced6e8);
+
+            
+        
+    
+
+            var marker_6d806dd80588457da91de0493544928f = L.marker(
+                [40.4383189,-3.7219663],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_bc8caaa5ed154d0e9c512a72ae161c5f);
+            
+    
+
+                var icon_50618bd06de340fd908772bc359df7b5 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_6d806dd80588457da91de0493544928f.setIcon(icon_50618bd06de340fd908772bc359df7b5);
+            
+    
+            var popup_5014e1395a7849758b19b68f2916c69f = L.popup({maxWidth: '300'});
+
+            
+                var html_a845eca7c63344329c167cd0694b8e8d = $('<div id="html_a845eca7c63344329c167cd0694b8e8d" style="width: 100.0%; height: 100.0%;">Museum of the Americas</div>')[0];
+                popup_5014e1395a7849758b19b68f2916c69f.setContent(html_a845eca7c63344329c167cd0694b8e8d);
+            
+
+            marker_6d806dd80588457da91de0493544928f.bindPopup(popup_5014e1395a7849758b19b68f2916c69f);
+
+            
+        
+    
+
+            var marker_d1d35c08ef79442caa2c736f250bfa66 = L.marker(
+                [40.4022855,-3.7199248],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_bc8caaa5ed154d0e9c512a72ae161c5f);
+            
+    
+
+                var icon_f6cf961664654e6f8bba7494183c6a95 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_d1d35c08ef79442caa2c736f250bfa66.setIcon(icon_f6cf961664654e6f8bba7494183c6a95);
+            
+    
+            var popup_37fc5e0e84394cc4a305c48e86b47147 = L.popup({maxWidth: '300'});
+
+            
+                var html_762f4b8bf91d4cc29808afcdbd2451f0 = $('<div id="html_762f4b8bf91d4cc29808afcdbd2451f0" style="width: 100.0%; height: 100.0%;">Museo Atlético de Madrid</div>')[0];
+                popup_37fc5e0e84394cc4a305c48e86b47147.setContent(html_762f4b8bf91d4cc29808afcdbd2451f0);
+            
+
+            marker_d1d35c08ef79442caa2c736f250bfa66.bindPopup(popup_37fc5e0e84394cc4a305c48e86b47147);
+
+            
+        
+    
+
+            var marker_646c8f89407c4b2a9a82c64814c7cff2 = L.marker(
+                [40.4329957,-3.6632793],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_bc8caaa5ed154d0e9c512a72ae161c5f);
+            
+    
+
+                var icon_a8a91af28bfe42daac248fee682a2faa = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_646c8f89407c4b2a9a82c64814c7cff2.setIcon(icon_a8a91af28bfe42daac248fee682a2faa);
+            
+    
+            var popup_981bbe9b0fba4711b0ffe3e847a07e71 = L.popup({maxWidth: '300'});
+
+            
+                var html_498b39c75a1749c6bf3a9400ca3fc352 = $('<div id="html_498b39c75a1749c6bf3a9400ca3fc352" style="width: 100.0%; height: 100.0%;">Bullfighting Museum</div>')[0];
+                popup_981bbe9b0fba4711b0ffe3e847a07e71.setContent(html_498b39c75a1749c6bf3a9400ca3fc352);
+            
+
+            marker_646c8f89407c4b2a9a82c64814c7cff2.bindPopup(popup_981bbe9b0fba4711b0ffe3e847a07e71);
+
+            
+        
+</script>
