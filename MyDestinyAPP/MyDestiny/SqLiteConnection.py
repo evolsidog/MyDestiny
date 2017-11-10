@@ -44,6 +44,5 @@ Atributo: Directorio de la base de datos
             self._close()
             return result
         except Exception as e:
-            print e
             self._close()
             return 1

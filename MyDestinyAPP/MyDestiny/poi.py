@@ -55,8 +55,6 @@ def get_google_info(latitude, longitude, radius, key, types):
         xml = response.read()
         return parse_google_xml_response(xml)
     except Exception as e:
-        # TODO Remove print and add logger
-        print  e
         return 1
 
 
@@ -76,7 +74,6 @@ def find_lat_long(country, key):
     return lat, lon
 
 
-# TODO Review word in spanish as ciudad, lugares, etc. Change by city
 def get_places(country, key, radio=10000, types=None):
     lat, lon = find_lat_long(country, key)
     if lat == 190:
@@ -92,9 +89,7 @@ def get_places(country, key, radio=10000, types=None):
         return (float(lat), float(lon), lugares)
 
 
-# TODO Hacer clase de test con todos los paises de la lista, creo que a veces da error porque algunos no tienen museos. Vigilar esos errores
 def generate_pois(country_code):
-    print country_code
     lat_origen, lon_origen, lugares = get_places(country_code, GOOGLE_KEY)
     map = folium.Map(location=[lat_origen, lon_origen], zoom_start=12)
 
@@ -107,7 +102,6 @@ def generate_pois(country_code):
 
     # Para probar exportamos a un html y vemos si ha funcionado
     map.save(POI_FILE + country_code + '.html')
-    print POI_FILE + country_code + '.html'
 
 
 '''

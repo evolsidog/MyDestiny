@@ -129,12 +129,11 @@ def suggestion():
             # We prepare input for the model
             codes_countries = [c.code for c in current_user.countries]
             # Initalize array with zeros
-            array_countries = np.array([0] * 44)
+            array_countries = np.array([0] * len(COUNTRY_LIST))
             # Assign ones where the user has traveled
             for code in codes_countries:
                 array_countries[COUNTRY_LIST.index(code)] = 1
             list_code_country_result = rs.predict(np.array([array_countries]))
-            print str(list_code_country_result)
             code_first = list_code_country_result[0]
             if not os.path.exists(POI_FILE + code_first + '.html'):
                 poi.generate_pois(code_first)
@@ -152,32 +151,12 @@ def suggestion():
                            map=map_path, list_countries=list_result_country)
 
 
-'''
-@app.route('/poi_map')
-def show_map_init(code_country=None):
-    app.logger.info('Peticion mapa por defecto')
-    poi.generate_pois(POI_DEFAULT_CODE)
-    app.logger.info('Enviano mapa:' + POI_FILE + POI_DEFAULT_CODE + '.html')
-    return send_file(POI_FILE + POI_DEFAULT_CODE + '.html')
-'''
-
-
 @app.route('/poi_map/<map>')
 def show_map(map):
     app.logger.info('Peticion mapa: ' + str(map))
     app.logger.info('Enviando mapa:' + POI_FILE + map)
     return send_file(POI_FILE + map)
 
-
-'''
-@app.route('/post_user', methods=['POST'])
-def post_user():
-    user = User(request.form['username'], request.form['email'])
-    print request.form['email']
-    db.session.add(user)
-    db.session.commit()
-    return redirect(url_for('index'))
-'''
 
 if __name__ == "__main__":
     app.run()

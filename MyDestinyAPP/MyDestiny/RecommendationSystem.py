@@ -25,7 +25,7 @@ def suma(a, b):
         sol[i] = a[i] + b[i]
     return sol
 
-
+# TODO Review distancia var and top 5 get AU by default when has few cases
 def dar_destino(listaCandidatos, pesos, distances, predecir):
     destinos = []
     for i in listaCandidatos:
@@ -42,6 +42,7 @@ def dar_destino(listaCandidatos, pesos, distances, predecir):
     return destino
 
 
+# TODO Review distancia var and top 5 get AU by default when has few cases
 def dar_destino_top5(listaCandidatos, pesos, distances, predecir):
     destinos = []
     for i in listaCandidatos:
@@ -62,9 +63,6 @@ def dar_destino_top5(listaCandidatos, pesos, distances, predecir):
 
 
 def predict(input):
-    # TODO Javi: Cambiar variables y metodos a ingles
-    # TODO Javi: Leer solo pesos necesarios
-    # TODO Javi: Insertar nuevos usuarios.
     # creamos las conexiones con la base de datos
     sql = SqLiteConnection(PATH_DB)
     con = sql.connector()
