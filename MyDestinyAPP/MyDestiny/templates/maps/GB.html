@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS = false; L_NO_TOUCH = false; L_DISABLE_3D = false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <style> #map_761dde51ce6c40ccb5e91221480309b4 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_761dde51ce6c40ccb5e91221480309b4" ></div>
+        
+</body>
+<script>    
+    
+
+            
+                var bounds = null;
+            
+
+            var map_761dde51ce6c40ccb5e91221480309b4 = L.map(
+                                  'map_761dde51ce6c40ccb5e91221480309b4',
+                                  {center: [55.378051,-3.435973],
+                                  zoom: 12,
+                                  maxBounds: bounds,
+                                  layers: [],
+                                  worldCopyJump: false,
+                                  crs: L.CRS.EPSG3857
+                                 });
+            
+        
+    
+            var tile_layer_2ce79205d8d54bb3a686e4d3a750df57 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null, 
+  "detectRetina": false, 
+  "maxZoom": 18, 
+  "minZoom": 1, 
+  "noWrap": false, 
+  "subdomains": "abc"
+}
+                ).addTo(map_761dde51ce6c40ccb5e91221480309b4);
+        
+    
+
+            var marker_d8f0a4aa58fa42229f0e1a5572f1f550 = L.marker(
+                [55.335208,-3.440337],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_761dde51ce6c40ccb5e91221480309b4);
+            
+    
+
+                var icon_2576f5c81f0e4a959aad823d9a340db3 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_d8f0a4aa58fa42229f0e1a5572f1f550.setIcon(icon_2576f5c81f0e4a959aad823d9a340db3);
+            
+    
+            var popup_6e16d924b4a34b0e91d22360d4f281de = L.popup({maxWidth: '300'});
+
+            
+                var html_2f91b44bb32045b1ac6b5bc52ffef4e3 = $('<div id="html_2f91b44bb32045b1ac6b5bc52ffef4e3" style="width: 100.0%; height: 100.0%;">Moffat</div>')[0];
+                popup_6e16d924b4a34b0e91d22360d4f281de.setContent(html_2f91b44bb32045b1ac6b5bc52ffef4e3);
+            
+
+            marker_d8f0a4aa58fa42229f0e1a5572f1f550.bindPopup(popup_6e16d924b4a34b0e91d22360d4f281de);
+
+            
+        
+    
+
+            var marker_a5eeb37cc456409997735f8e2913cc95 = L.marker(
+                [55.3330316,-3.4448538],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_761dde51ce6c40ccb5e91221480309b4);
+            
+    
+
+                var icon_e5d1787b85974549b0b05f8fd9e1c517 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_a5eeb37cc456409997735f8e2913cc95.setIcon(icon_e5d1787b85974549b0b05f8fd9e1c517);
+            
+    
+            var popup_47c754b809374f498e31b78be88ee03c = L.popup({maxWidth: '300'});
+
+            
+                var html_1c4edc03c4d441aba7300bbd35ede682 = $('<div id="html_1c4edc03c4d441aba7300bbd35ede682" style="width: 100.0%; height: 100.0%;">Annandale Arms Hotel and Restaurant</div>')[0];
+                popup_47c754b809374f498e31b78be88ee03c.setContent(html_1c4edc03c4d441aba7300bbd35ede682);
+            
+
+            marker_a5eeb37cc456409997735f8e2913cc95.bindPopup(popup_47c754b809374f498e31b78be88ee03c);
+
+            
+        
+    
+
+            var marker_5f0a73059368489c9af9e1f88e313b64 = L.marker(
+                [55.337786,-3.44781],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_761dde51ce6c40ccb5e91221480309b4);
+            
+    
+
+                var icon_2adb8436f306403a93c980e1e1a846cf = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_5f0a73059368489c9af9e1f88e313b64.setIcon(icon_2adb8436f306403a93c980e1e1a846cf);
+            
+    
+            var popup_96e9c54a33214dd5893c0368679cb00d = L.popup({maxWidth: '300'});
+
+            
+                var html_d044f44d31834929851dbd2ac4c7b629 = $('<div id="html_d044f44d31834929851dbd2ac4c7b629" style="width: 100.0%; height: 100.0%;">Queensberry House</div>')[0];
+                popup_96e9c54a33214dd5893c0368679cb00d.setContent(html_d044f44d31834929851dbd2ac4c7b629);
+            
+
+            marker_5f0a73059368489c9af9e1f88e313b64.bindPopup(popup_96e9c54a33214dd5893c0368679cb00d);
+
+            
+        
+    
+
+            var marker_31a3a3a72876424693c1a1d4a3490193 = L.marker(
+                [55.332667,-3.443636],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_761dde51ce6c40ccb5e91221480309b4);
+            
+    
+
+                var icon_cef0aa8441e74210a2cdb231b9718d4a = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_31a3a3a72876424693c1a1d4a3490193.setIcon(icon_cef0aa8441e74210a2cdb231b9718d4a);
+            
+    
+            var popup_bf841d1c6599456a81eac81977bff15b = L.popup({maxWidth: '300'});
+
+            
+                var html_576c266085f14a2d873096a1cf941d18 = $('<div id="html_576c266085f14a2d873096a1cf941d18" style="width: 100.0%; height: 100.0%;">The Famous Star Hotel & Restaurant</div>')[0];
+                popup_bf841d1c6599456a81eac81977bff15b.setContent(html_576c266085f14a2d873096a1cf941d18);
+            
+
+            marker_31a3a3a72876424693c1a1d4a3490193.bindPopup(popup_bf841d1c6599456a81eac81977bff15b);
+
+            
+        
+    
+
+            var marker_327200d2a9dc40d0bcd7b5fd97622c14 = L.marker(
+                [55.3324836,-3.4441804],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_761dde51ce6c40ccb5e91221480309b4);
+            
+    
+
+                var icon_6f2dd1201abe4bc988314ccffd40dfce = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_327200d2a9dc40d0bcd7b5fd97622c14.setIcon(icon_6f2dd1201abe4bc988314ccffd40dfce);
+            
+    
+            var popup_8dd57a205d7d4c2dbd9516056dff4497 = L.popup({maxWidth: '300'});
+
+            
+                var html_485246e96419422aaa8ff25334081d48 = $('<div id="html_485246e96419422aaa8ff25334081d48" style="width: 100.0%; height: 100.0%;">The Buccleuch Arms Hotel</div>')[0];
+                popup_8dd57a205d7d4c2dbd9516056dff4497.setContent(html_485246e96419422aaa8ff25334081d48);
+            
+
+            marker_327200d2a9dc40d0bcd7b5fd97622c14.bindPopup(popup_8dd57a205d7d4c2dbd9516056dff4497);
+
+            
+        
+    
+
+            var marker_6f3e7ba6c46e4b4cbb60d27e779ef5a0 = L.marker(
+                [55.3338386,-3.4456958],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_761dde51ce6c40ccb5e91221480309b4);
+            
+    
+
+                var icon_957cebda06a8415a81941c11d0f1b62b = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_6f3e7ba6c46e4b4cbb60d27e779ef5a0.setIcon(icon_957cebda06a8415a81941c11d0f1b62b);
+            
+    
+            var popup_13192bc1cd31498da37946b0e88662f1 = L.popup({maxWidth: '300'});
+
+            
+                var html_2dad14707806491596421212921949be = $('<div id="html_2dad14707806491596421212921949be" style="width: 100.0%; height: 100.0%;">moffat house hotel cottages</div>')[0];
+                popup_13192bc1cd31498da37946b0e88662f1.setContent(html_2dad14707806491596421212921949be);
+            
+
+            marker_6f3e7ba6c46e4b4cbb60d27e779ef5a0.bindPopup(popup_13192bc1cd31498da37946b0e88662f1);
+
+            
+        
+    
+
+            var marker_2ac7215e47b3482992c2a294e85f5fb0 = L.marker(
+                [55.334347,-3.445451],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_761dde51ce6c40ccb5e91221480309b4);
+            
+    
+
+                var icon_06bef088c4ec4f6f90ea796dbe7eea51 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_2ac7215e47b3482992c2a294e85f5fb0.setIcon(icon_06bef088c4ec4f6f90ea796dbe7eea51);
+            
+    
+            var popup_2a9a1a549cd74e0fa301fa7382ee1e24 = L.popup({maxWidth: '300'});
+
+            
+                var html_f20fe52ab4504ab98643e4d5919138d9 = $('<div id="html_f20fe52ab4504ab98643e4d5919138d9" style="width: 100.0%; height: 100.0%;">Stag Hotel Moffat</div>')[0];
+                popup_2a9a1a549cd74e0fa301fa7382ee1e24.setContent(html_f20fe52ab4504ab98643e4d5919138d9);
+            
+
+            marker_2ac7215e47b3482992c2a294e85f5fb0.bindPopup(popup_2a9a1a549cd74e0fa301fa7382ee1e24);
+
+            
+        
+    
+
+            var marker_880e85fd2b1642949b8ff127c96ac67b = L.marker(
+                [55.3331884,-3.4438538],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_761dde51ce6c40ccb5e91221480309b4);
+            
+    
+
+                var icon_3c7f141362ea4fb98afb144640c3030e = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_880e85fd2b1642949b8ff127c96ac67b.setIcon(icon_3c7f141362ea4fb98afb144640c3030e);
+            
+    
+            var popup_cde6cfc8884f4dad91b4d69a4faa8d96 = L.popup({maxWidth: '300'});
+
+            
+                var html_e2180cfb44df457892bccfe0d56cc625 = $('<div id="html_e2180cfb44df457892bccfe0d56cc625" style="width: 100.0%; height: 100.0%;">The Bonnington</div>')[0];
+                popup_cde6cfc8884f4dad91b4d69a4faa8d96.setContent(html_e2180cfb44df457892bccfe0d56cc625);
+            
+
+            marker_880e85fd2b1642949b8ff127c96ac67b.bindPopup(popup_cde6cfc8884f4dad91b4d69a4faa8d96);
+
+            
+        
+    
+
+            var marker_94b16b4947f1472dbb387f2cba0b479d = L.marker(
+                [55.2899134,-3.4478751],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_761dde51ce6c40ccb5e91221480309b4);
+            
+    
+
+                var icon_fdf1aab9fd8c493e9ee656219d92c2ef = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_94b16b4947f1472dbb387f2cba0b479d.setIcon(icon_fdf1aab9fd8c493e9ee656219d92c2ef);
+            
+    
+            var popup_dfb1faf2364548adae6e005d2bd6f058 = L.popup({maxWidth: '300'});
+
+            
+                var html_0f912a0887724c16953488759bb2bee7 = $('<div id="html_0f912a0887724c16953488759bb2bee7" style="width: 100.0%; height: 100.0%;">Marchbankwood House</div>')[0];
+                popup_dfb1faf2364548adae6e005d2bd6f058.setContent(html_0f912a0887724c16953488759bb2bee7);
+            
+
+            marker_94b16b4947f1472dbb387f2cba0b479d.bindPopup(popup_dfb1faf2364548adae6e005d2bd6f058);
+
+            
+        
+    
+
+            var marker_587a658a840640e88b684fd729e7b881 = L.marker(
+                [55.3027387,-3.4557367],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_761dde51ce6c40ccb5e91221480309b4);
+            
+    
+
+                var icon_bb7783164f654d10b7a71ddad9dd10d5 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_587a658a840640e88b684fd729e7b881.setIcon(icon_bb7783164f654d10b7a71ddad9dd10d5);
+            
+    
+            var popup_b35b7f84ccdb4ff1be76920d88832182 = L.popup({maxWidth: '300'});
+
+            
+                var html_2b8354d9c6cb4e2da70e05fe002d3343 = $('<div id="html_2b8354d9c6cb4e2da70e05fe002d3343" style="width: 100.0%; height: 100.0%;">Moffat Manor Holiday Park</div>')[0];
+                popup_b35b7f84ccdb4ff1be76920d88832182.setContent(html_2b8354d9c6cb4e2da70e05fe002d3343);
+            
+
+            marker_587a658a840640e88b684fd729e7b881.bindPopup(popup_b35b7f84ccdb4ff1be76920d88832182);
+
+            
+        
+    
+
+            var marker_d399e1768bdb4cfdae1facc48ee4b376 = L.marker(
+                [55.3318305,-3.4334798],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_761dde51ce6c40ccb5e91221480309b4);
+            
+    
+
+                var icon_d2fa90fbbd4149378e42879cb5899ee1 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_d399e1768bdb4cfdae1facc48ee4b376.setIcon(icon_d2fa90fbbd4149378e42879cb5899ee1);
+            
+    
+            var popup_cc38298ca85149a1b4e2108db4915386 = L.popup({maxWidth: '300'});
+
+            
+                var html_d064608034204197b3c6734a03710b4f = $('<div id="html_d064608034204197b3c6734a03710b4f" style="width: 100.0%; height: 100.0%;">Marshalls</div>')[0];
+                popup_cc38298ca85149a1b4e2108db4915386.setContent(html_d064608034204197b3c6734a03710b4f);
+            
+
+            marker_d399e1768bdb4cfdae1facc48ee4b376.bindPopup(popup_cc38298ca85149a1b4e2108db4915386);
+
+            
+        
+    
+
+            var marker_b9088c20b93a4144bfcc90ad3df6615d = L.marker(
+                [55.3334838,-3.4441296],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_761dde51ce6c40ccb5e91221480309b4);
+            
+    
+
+                var icon_89d83fa7228a48b9bfe1a90fb698b701 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_b9088c20b93a4144bfcc90ad3df6615d.setIcon(icon_89d83fa7228a48b9bfe1a90fb698b701);
+            
+    
+            var popup_6ce5d706cba44046a9d66a95f59e1f2e = L.popup({maxWidth: '300'});
+
+            
+                var html_3deed2c200404f08af95196c1263232b = $('<div id="html_3deed2c200404f08af95196c1263232b" style="width: 100.0%; height: 100.0%;">Balmoral Hotel</div>')[0];
+                popup_6ce5d706cba44046a9d66a95f59e1f2e.setContent(html_3deed2c200404f08af95196c1263232b);
+            
+
+            marker_b9088c20b93a4144bfcc90ad3df6615d.bindPopup(popup_6ce5d706cba44046a9d66a95f59e1f2e);
+
+            
+        
+    
+
+            var marker_f08cd6877ca6466192d319bb1d87be4e = L.marker(
+                [55.3318221,-3.4426394],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_761dde51ce6c40ccb5e91221480309b4);
+            
+    
+
+                var icon_fe104a5f7890486c9cc38880df91ddbe = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_f08cd6877ca6466192d319bb1d87be4e.setIcon(icon_fe104a5f7890486c9cc38880df91ddbe);
+            
+    
+            var popup_5ee0d5f8465b4661ae3e751b35a65355 = L.popup({maxWidth: '300'});
+
+            
+                var html_d87882505e174ace8f66723cb2e4abd8 = $('<div id="html_d87882505e174ace8f66723cb2e4abd8" style="width: 100.0%; height: 100.0%;">The Wee Cottage</div>')[0];
+                popup_5ee0d5f8465b4661ae3e751b35a65355.setContent(html_d87882505e174ace8f66723cb2e4abd8);
+            
+
+            marker_f08cd6877ca6466192d319bb1d87be4e.bindPopup(popup_5ee0d5f8465b4661ae3e751b35a65355);
+
+            
+        
+    
+
+            var marker_46bc7dd8cb8b410f95036fc7939f705f = L.marker(
+                [55.329822,-3.443531],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_761dde51ce6c40ccb5e91221480309b4);
+            
+    
+
+                var icon_20a011edb3d14fa492881e5743bbf295 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_46bc7dd8cb8b410f95036fc7939f705f.setIcon(icon_20a011edb3d14fa492881e5743bbf295);
+            
+    
+            var popup_4cb4dd73b1404e14a23bb21cb4d0409c = L.popup({maxWidth: '300'});
+
+            
+                var html_bb1b31c7840340be8fe4285f18b12ce1 = $('<div id="html_bb1b31c7840340be8fe4285f18b12ce1" style="width: 100.0%; height: 100.0%;">Co-op Food - Moffat</div>')[0];
+                popup_4cb4dd73b1404e14a23bb21cb4d0409c.setContent(html_bb1b31c7840340be8fe4285f18b12ce1);
+            
+
+            marker_46bc7dd8cb8b410f95036fc7939f705f.bindPopup(popup_4cb4dd73b1404e14a23bb21cb4d0409c);
+
+            
+        
+    
+
+            var marker_9f8beed9da324d15aae4672a71e50a01 = L.marker(
+                [55.3274721,-3.4792274],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_761dde51ce6c40ccb5e91221480309b4);
+            
+    
+
+                var icon_015263eb5041400683c1e0e47917d050 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_9f8beed9da324d15aae4672a71e50a01.setIcon(icon_015263eb5041400683c1e0e47917d050);
+            
+    
+            var popup_f159125379674abe8b588c43c9feae14 = L.popup({maxWidth: '300'});
+
+            
+                var html_e835807617014ccba89f8f8cbb96cdd2 = $('<div id="html_e835807617014ccba89f8f8cbb96cdd2" style="width: 100.0%; height: 100.0%;">Auchen Castle</div>')[0];
+                popup_f159125379674abe8b588c43c9feae14.setContent(html_e835807617014ccba89f8f8cbb96cdd2);
+            
+
+            marker_9f8beed9da324d15aae4672a71e50a01.bindPopup(popup_f159125379674abe8b588c43c9feae14);
+
+            
+        
+    
+
+            var marker_1b1e929482ed418ea4160f6cc0dc63df = L.marker(
+                [55.3379951,-3.448017],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_761dde51ce6c40ccb5e91221480309b4);
+            
+    
+
+                var icon_01dbbdba018546caa9fec63a742aeb1d = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_1b1e929482ed418ea4160f6cc0dc63df.setIcon(icon_01dbbdba018546caa9fec63a742aeb1d);
+            
+    
+            var popup_068596f70e454108a58f6aaeff76d756 = L.popup({maxWidth: '300'});
+
+            
+                var html_1473d0371c38459f9ea07419b81ce75f = $('<div id="html_1473d0371c38459f9ea07419b81ce75f" style="width: 100.0%; height: 100.0%;">Rockhill Guest House</div>')[0];
+                popup_068596f70e454108a58f6aaeff76d756.setContent(html_1473d0371c38459f9ea07419b81ce75f);
+            
+
+            marker_1b1e929482ed418ea4160f6cc0dc63df.bindPopup(popup_068596f70e454108a58f6aaeff76d756);
+
+            
+        
+    
+
+            var marker_b476f1105f9a40508dd528cc85fb3086 = L.marker(
+                [55.3389496,-3.447454],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_761dde51ce6c40ccb5e91221480309b4);
+            
+    
+
+                var icon_bed914198eaf40dab592a0245c7230c8 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_b476f1105f9a40508dd528cc85fb3086.setIcon(icon_bed914198eaf40dab592a0245c7230c8);
+            
+    
+            var popup_76c46f3db0cb4e97839765593b476fb2 = L.popup({maxWidth: '300'});
+
+            
+                var html_95aa9074ca3c4444bfdad92ae7ec2a45 = $('<div id="html_95aa9074ca3c4444bfdad92ae7ec2a45" style="width: 100.0%; height: 100.0%;">Ashfield</div>')[0];
+                popup_76c46f3db0cb4e97839765593b476fb2.setContent(html_95aa9074ca3c4444bfdad92ae7ec2a45);
+            
+
+            marker_b476f1105f9a40508dd528cc85fb3086.bindPopup(popup_76c46f3db0cb4e97839765593b476fb2);
+
+            
+        
+    
+
+            var marker_fd9c75c5c2474a93ac07b120f63ee41d = L.marker(
+                [55.331621,-3.443738],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_761dde51ce6c40ccb5e91221480309b4);
+            
+    
+
+                var icon_6224f0084e084829b1126bb550e5848e = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_fd9c75c5c2474a93ac07b120f63ee41d.setIcon(icon_6224f0084e084829b1126bb550e5848e);
+            
+    
+            var popup_792477f346604a1982a32616bb1b764a = L.popup({maxWidth: '300'});
+
+            
+                var html_469356f6691041c2a39240d27252c220 = $('<div id="html_469356f6691041c2a39240d27252c220" style="width: 100.0%; height: 100.0%;">Annandale Cycles & Caledonian Cottage</div>')[0];
+                popup_792477f346604a1982a32616bb1b764a.setContent(html_469356f6691041c2a39240d27252c220);
+            
+
+            marker_fd9c75c5c2474a93ac07b120f63ee41d.bindPopup(popup_792477f346604a1982a32616bb1b764a);
+
+            
+        
+    
+
+            var marker_8b2248d1888a46068f10e204cb94cebc = L.marker(
+                [55.3099923,-3.4534081],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_761dde51ce6c40ccb5e91221480309b4);
+            
+    
+
+                var icon_e036d7588ed641b1b3dda35e895738a5 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_8b2248d1888a46068f10e204cb94cebc.setIcon(icon_e036d7588ed641b1b3dda35e895738a5);
+            
+    
+            var popup_e0cc63233e6b471d8de184449e2006e6 = L.popup({maxWidth: '300'});
+
+            
+                var html_bf446cc77f5d43a5978f8e07bb2cb7d4 = $('<div id="html_bf446cc77f5d43a5978f8e07bb2cb7d4" style="width: 100.0%; height: 100.0%;">Moffat Mansion</div>')[0];
+                popup_e0cc63233e6b471d8de184449e2006e6.setContent(html_bf446cc77f5d43a5978f8e07bb2cb7d4);
+            
+
+            marker_8b2248d1888a46068f10e204cb94cebc.bindPopup(popup_e0cc63233e6b471d8de184449e2006e6);
+
+            
+        
+    
+
+            var marker_85464f32a4ff4e01b0ce36d8b4089e0e = L.marker(
+                [55.301012,-3.452188],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_761dde51ce6c40ccb5e91221480309b4);
+            
+    
+
+                var icon_9b39d7744198434d80a9cd77c4821a2d = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_85464f32a4ff4e01b0ce36d8b4089e0e.setIcon(icon_9b39d7744198434d80a9cd77c4821a2d);
+            
+    
+            var popup_31a59704385d4e7da9ef6bcd28724d9c = L.popup({maxWidth: '300'});
+
+            
+                var html_4de110cbeb37423693bdfd408a17bdce = $('<div id="html_4de110cbeb37423693bdfd408a17bdce" style="width: 100.0%; height: 100.0%;">Beattock</div>')[0];
+                popup_31a59704385d4e7da9ef6bcd28724d9c.setContent(html_4de110cbeb37423693bdfd408a17bdce);
+            
+
+            marker_85464f32a4ff4e01b0ce36d8b4089e0e.bindPopup(popup_31a59704385d4e7da9ef6bcd28724d9c);
+
+            
+        
+</script>

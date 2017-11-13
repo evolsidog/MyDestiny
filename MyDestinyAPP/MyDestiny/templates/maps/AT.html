@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS = false; L_NO_TOUCH = false; L_DISABLE_3D = false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <style> #map_6c96fbc01c224031aee6868f87b0daf6 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_6c96fbc01c224031aee6868f87b0daf6" ></div>
+        
+</body>
+<script>    
+    
+
+            
+                var bounds = null;
+            
+
+            var map_6c96fbc01c224031aee6868f87b0daf6 = L.map(
+                                  'map_6c96fbc01c224031aee6868f87b0daf6',
+                                  {center: [47.516231,14.550072],
+                                  zoom: 12,
+                                  maxBounds: bounds,
+                                  layers: [],
+                                  worldCopyJump: false,
+                                  crs: L.CRS.EPSG3857
+                                 });
+            
+        
+    
+            var tile_layer_82c2432396714d7d8c20ce68f3a3092c = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null, 
+  "detectRetina": false, 
+  "maxZoom": 18, 
+  "minZoom": 1, 
+  "noWrap": false, 
+  "subdomains": "abc"
+}
+                ).addTo(map_6c96fbc01c224031aee6868f87b0daf6);
+        
+    
+
+            var marker_9a0dc9e6e0b148ef846819affba32155 = L.marker(
+                [47.5253626,14.3573448],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6c96fbc01c224031aee6868f87b0daf6);
+            
+    
+
+                var icon_ca3d80004d5041449ed7fb9f14932049 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_9a0dc9e6e0b148ef846819affba32155.setIcon(icon_ca3d80004d5041449ed7fb9f14932049);
+            
+    
+            var popup_dd5127e48f8b4da8a7a61e6fb2bd8995 = L.popup({maxWidth: '300'});
+
+            
+                var html_e5df31b7e9bf436e8d210f69fec9e2f4 = $('<div id="html_e5df31b7e9bf436e8d210f69fec9e2f4" style="width: 100.0%; height: 100.0%;">Rottenmann</div>')[0];
+                popup_dd5127e48f8b4da8a7a61e6fb2bd8995.setContent(html_e5df31b7e9bf436e8d210f69fec9e2f4);
+            
+
+            marker_9a0dc9e6e0b148ef846819affba32155.bindPopup(popup_dd5127e48f8b4da8a7a61e6fb2bd8995);
+
+            
+        
+    
+
+            var marker_d780d05a16c2452cb80c085d7db7e77a = L.marker(
+                [47.5327448,14.6083835],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6c96fbc01c224031aee6868f87b0daf6);
+            
+    
+
+                var icon_17df5e5ef0474a4b8386afd973b9cfbd = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_d780d05a16c2452cb80c085d7db7e77a.setIcon(icon_17df5e5ef0474a4b8386afd973b9cfbd);
+            
+    
+            var popup_fbe1260cc4564450a4083b9772ec37b2 = L.popup({maxWidth: '300'});
+
+            
+                var html_5191eefe580949678d110e8ca4a820dc = $('<div id="html_5191eefe580949678d110e8ca4a820dc" style="width: 100.0%; height: 100.0%;">Huberbauer</div>')[0];
+                popup_fbe1260cc4564450a4083b9772ec37b2.setContent(html_5191eefe580949678d110e8ca4a820dc);
+            
+
+            marker_d780d05a16c2452cb80c085d7db7e77a.bindPopup(popup_fbe1260cc4564450a4083b9772ec37b2);
+
+            
+        
+    
+
+            var marker_5766b65e7ccf43d1b5abd43ccadd4082 = L.marker(
+                [47.5649983,14.4531314],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6c96fbc01c224031aee6868f87b0daf6);
+            
+    
+
+                var icon_76747105bde94429868bce0e84a8071b = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_5766b65e7ccf43d1b5abd43ccadd4082.setIcon(icon_76747105bde94429868bce0e84a8071b);
+            
+    
+            var popup_3817d1d84fa7495da24528cd1b5e56cb = L.popup({maxWidth: '300'});
+
+            
+                var html_8b6c862b797c47d0a2ed4d3b1c1f4ffb = $('<div id="html_8b6c862b797c47d0a2ed4d3b1c1f4ffb" style="width: 100.0%; height: 100.0%;">JUFA Hotel Schloss Röthelstein***</div>')[0];
+                popup_3817d1d84fa7495da24528cd1b5e56cb.setContent(html_8b6c862b797c47d0a2ed4d3b1c1f4ffb);
+            
+
+            marker_5766b65e7ccf43d1b5abd43ccadd4082.bindPopup(popup_3817d1d84fa7495da24528cd1b5e56cb);
+
+            
+        
+    
+
+            var marker_ade2cab95c1e4a4f9293a38455563c19 = L.marker(
+                [47.5759791,14.4610975],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6c96fbc01c224031aee6868f87b0daf6);
+            
+    
+
+                var icon_38ca4eb2cb4f43e5845f9f0050d53468 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_ade2cab95c1e4a4f9293a38455563c19.setIcon(icon_38ca4eb2cb4f43e5845f9f0050d53468);
+            
+    
+            var popup_c000a5e2bbbb4ac890da0a2b50537046 = L.popup({maxWidth: '300'});
+
+            
+                var html_3bcad8ccba7a4971935993f80c82b87f = $('<div id="html_3bcad8ccba7a4971935993f80c82b87f" style="width: 100.0%; height: 100.0%;">Hotel die Traube</div>')[0];
+                popup_c000a5e2bbbb4ac890da0a2b50537046.setContent(html_3bcad8ccba7a4971935993f80c82b87f);
+            
+
+            marker_ade2cab95c1e4a4f9293a38455563c19.bindPopup(popup_c000a5e2bbbb4ac890da0a2b50537046);
+
+            
+        
+    
+
+            var marker_1750fe9b8d594e89a15174a289c48fd4 = L.marker(
+                [47.579124,14.4635291],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6c96fbc01c224031aee6868f87b0daf6);
+            
+    
+
+                var icon_ac271acc266e424cacff7845565458da = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_1750fe9b8d594e89a15174a289c48fd4.setIcon(icon_ac271acc266e424cacff7845565458da);
+            
+    
+            var popup_a21c836027014cedb75a81139b67d87f = L.popup({maxWidth: '300'});
+
+            
+                var html_c6e3a18be7eb4656aeae738c13a68d33 = $('<div id="html_c6e3a18be7eb4656aeae738c13a68d33" style="width: 100.0%; height: 100.0%;">Hotel Spirodom Admont</div>')[0];
+                popup_a21c836027014cedb75a81139b67d87f.setContent(html_c6e3a18be7eb4656aeae738c13a68d33);
+            
+
+            marker_1750fe9b8d594e89a15174a289c48fd4.bindPopup(popup_a21c836027014cedb75a81139b67d87f);
+
+            
+        
+    
+
+            var marker_f7542fa0282141b7b09a62cd938a8353 = L.marker(
+                [47.4895112,14.5452872],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6c96fbc01c224031aee6868f87b0daf6);
+            
+    
+
+                var icon_6dab00973b064061b51cc9fb5c6c8104 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_f7542fa0282141b7b09a62cd938a8353.setIcon(icon_6dab00973b064061b51cc9fb5c6c8104);
+            
+    
+            var popup_cbb005f886454554836eb01d5d16261e = L.popup({maxWidth: '300'});
+
+            
+                var html_4061f0e4675249cd97749308137e79f2 = $('<div id="html_4061f0e4675249cd97749308137e79f2" style="width: 100.0%; height: 100.0%;">Gaishorn am See</div>')[0];
+                popup_cbb005f886454554836eb01d5d16261e.setContent(html_4061f0e4675249cd97749308137e79f2);
+            
+
+            marker_f7542fa0282141b7b09a62cd938a8353.bindPopup(popup_cbb005f886454554836eb01d5d16261e);
+
+            
+        
+    
+
+            var marker_9505225170a048638cdb1a53c7752b09 = L.marker(
+                [47.5278525,14.5073959],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6c96fbc01c224031aee6868f87b0daf6);
+            
+    
+
+                var icon_c887d5c416ef4c8aa76aba1867d3004a = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_9505225170a048638cdb1a53c7752b09.setIcon(icon_c887d5c416ef4c8aa76aba1867d3004a);
+            
+    
+            var popup_446d8501cb1a4d6aa0e80b1840a18503 = L.popup({maxWidth: '300'});
+
+            
+                var html_916a5f8283eb41299998610f0426a41a = $('<div id="html_916a5f8283eb41299998610f0426a41a" style="width: 100.0%; height: 100.0%;">Lahngangkogel</div>')[0];
+                popup_446d8501cb1a4d6aa0e80b1840a18503.setContent(html_916a5f8283eb41299998610f0426a41a);
+            
+
+            marker_9505225170a048638cdb1a53c7752b09.bindPopup(popup_446d8501cb1a4d6aa0e80b1840a18503);
+
+            
+        
+    
+
+            var marker_f7c3fb8f5f5a4c98aa821ed3d4289ff3 = L.marker(
+                [47.5495621,14.5303581],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6c96fbc01c224031aee6868f87b0daf6);
+            
+    
+
+                var icon_43cdf6d1790a4f14a7c6afecbd4aca4c = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_f7c3fb8f5f5a4c98aa821ed3d4289ff3.setIcon(icon_43cdf6d1790a4f14a7c6afecbd4aca4c);
+            
+    
+            var popup_f21898ec7f8746859b31ec5746eb677d = L.popup({maxWidth: '300'});
+
+            
+                var html_c3710734ada24cf1a5ef3a15bb3be412 = $('<div id="html_c3710734ada24cf1a5ef3a15bb3be412" style="width: 100.0%; height: 100.0%;">Sparafeld</div>')[0];
+                popup_f21898ec7f8746859b31ec5746eb677d.setContent(html_c3710734ada24cf1a5ef3a15bb3be412);
+            
+
+            marker_f7c3fb8f5f5a4c98aa821ed3d4289ff3.bindPopup(popup_f21898ec7f8746859b31ec5746eb677d);
+
+            
+        
+    
+
+            var marker_a5589570c2c4487c8bf262dcc09f3f80 = L.marker(
+                [47.4986533,14.6210613],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6c96fbc01c224031aee6868f87b0daf6);
+            
+    
+
+                var icon_3587e42e8b934ce1a6270c3cfbcdc8bd = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_a5589570c2c4487c8bf262dcc09f3f80.setIcon(icon_3587e42e8b934ce1a6270c3cfbcdc8bd);
+            
+    
+            var popup_8c80662b15e44f8790a3f6f4bb2aaa4c = L.popup({maxWidth: '300'});
+
+            
+                var html_42cac80b88bb43d382e0ebd48116e4ca = $('<div id="html_42cac80b88bb43d382e0ebd48116e4ca" style="width: 100.0%; height: 100.0%;">Blaseneck</div>')[0];
+                popup_8c80662b15e44f8790a3f6f4bb2aaa4c.setContent(html_42cac80b88bb43d382e0ebd48116e4ca);
+            
+
+            marker_a5589570c2c4487c8bf262dcc09f3f80.bindPopup(popup_8c80662b15e44f8790a3f6f4bb2aaa4c);
+
+            
+        
+    
+
+            var marker_287c427a5dfd492d83b70cb6a2444858 = L.marker(
+                [47.4539175,14.5540367],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6c96fbc01c224031aee6868f87b0daf6);
+            
+    
+
+                var icon_9b31501676fb44368fe6b27f5bfc809f = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_287c427a5dfd492d83b70cb6a2444858.setIcon(icon_9b31501676fb44368fe6b27f5bfc809f);
+            
+    
+            var popup_c8fed4e3349b4715859862843981dcf3 = L.popup({maxWidth: '300'});
+
+            
+                var html_1eab9632becd4c00a4225eff30f06c7d = $('<div id="html_1eab9632becd4c00a4225eff30f06c7d" style="width: 100.0%; height: 100.0%;">Vöttleck</div>')[0];
+                popup_c8fed4e3349b4715859862843981dcf3.setContent(html_1eab9632becd4c00a4225eff30f06c7d);
+            
+
+            marker_287c427a5dfd492d83b70cb6a2444858.bindPopup(popup_c8fed4e3349b4715859862843981dcf3);
+
+            
+        
+    
+
+            var marker_0bc7cf12a1c34422ba6b00a2f493c22d = L.marker(
+                [47.5565021,14.6205884],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6c96fbc01c224031aee6868f87b0daf6);
+            
+    
+
+                var icon_df40b09edbc24d63a091ca185573ae34 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_0bc7cf12a1c34422ba6b00a2f493c22d.setIcon(icon_df40b09edbc24d63a091ca185573ae34);
+            
+    
+            var popup_77354dae03f94956a242b91695bc6054 = L.popup({maxWidth: '300'});
+
+            
+                var html_b4f7262675f64cccb6e26d687c837670 = $('<div id="html_b4f7262675f64cccb6e26d687c837670" style="width: 100.0%; height: 100.0%;">Festkogel</div>')[0];
+                popup_77354dae03f94956a242b91695bc6054.setContent(html_b4f7262675f64cccb6e26d687c837670);
+            
+
+            marker_0bc7cf12a1c34422ba6b00a2f493c22d.bindPopup(popup_77354dae03f94956a242b91695bc6054);
+
+            
+        
+    
+
+            var marker_73210d8b9b474f0bbea381fd42ad80d7 = L.marker(
+                [47.5769399,14.4608081],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6c96fbc01c224031aee6868f87b0daf6);
+            
+    
+
+                var icon_5e90ba57ec7741e0a07051196e0b10e0 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_73210d8b9b474f0bbea381fd42ad80d7.setIcon(icon_5e90ba57ec7741e0a07051196e0b10e0);
+            
+    
+            var popup_08cc1897f6c4413888d58d12a633e35c = L.popup({maxWidth: '300'});
+
+            
+                var html_263cd77e9de54a86b6f3718de7eb7ce4 = $('<div id="html_263cd77e9de54a86b6f3718de7eb7ce4" style="width: 100.0%; height: 100.0%;">Gasthof Zeiser</div>')[0];
+                popup_08cc1897f6c4413888d58d12a633e35c.setContent(html_263cd77e9de54a86b6f3718de7eb7ce4);
+            
+
+            marker_73210d8b9b474f0bbea381fd42ad80d7.bindPopup(popup_08cc1897f6c4413888d58d12a633e35c);
+
+            
+        
+    
+
+            var marker_d1b20f5f190b4fceb87f6cb7425163f6 = L.marker(
+                [47.5472198,14.52102],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6c96fbc01c224031aee6868f87b0daf6);
+            
+    
+
+                var icon_bcd56fc8a2e74d21aa25ec17d3234ba9 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_d1b20f5f190b4fceb87f6cb7425163f6.setIcon(icon_bcd56fc8a2e74d21aa25ec17d3234ba9);
+            
+    
+            var popup_947c60ffcfb448adb6cc8b821a8ec584 = L.popup({maxWidth: '300'});
+
+            
+                var html_5cbb7771ca5b44bc912f70b887b87c9a = $('<div id="html_5cbb7771ca5b44bc912f70b887b87c9a" style="width: 100.0%; height: 100.0%;">Kalbling</div>')[0];
+                popup_947c60ffcfb448adb6cc8b821a8ec584.setContent(html_5cbb7771ca5b44bc912f70b887b87c9a);
+            
+
+            marker_d1b20f5f190b4fceb87f6cb7425163f6.bindPopup(popup_947c60ffcfb448adb6cc8b821a8ec584);
+
+            
+        
+    
+
+            var marker_66117677705a41279640bde0b03371f6 = L.marker(
+                [47.49214,14.4673542],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6c96fbc01c224031aee6868f87b0daf6);
+            
+    
+
+                var icon_b5bab8b84c8b4d8ca5694d034577c14e = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_66117677705a41279640bde0b03371f6.setIcon(icon_b5bab8b84c8b4d8ca5694d034577c14e);
+            
+    
+            var popup_9a2289b9934a43ed9d912ef311caf3e0 = L.popup({maxWidth: '300'});
+
+            
+                var html_5fa78a3fee86465f81426375623457eb = $('<div id="html_5fa78a3fee86465f81426375623457eb" style="width: 100.0%; height: 100.0%;">Mr. Hans-Peter Haberl</div>')[0];
+                popup_9a2289b9934a43ed9d912ef311caf3e0.setContent(html_5fa78a3fee86465f81426375623457eb);
+            
+
+            marker_66117677705a41279640bde0b03371f6.bindPopup(popup_9a2289b9934a43ed9d912ef311caf3e0);
+
+            
+        
+    
+
+            var marker_fc15d932050d4e9f8a2f2b9db315d0a5 = L.marker(
+                [47.5361479,14.6228624],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6c96fbc01c224031aee6868f87b0daf6);
+            
+    
+
+                var icon_c3c3e23f317e4437ba8e5dc5488212c8 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_fc15d932050d4e9f8a2f2b9db315d0a5.setIcon(icon_c3c3e23f317e4437ba8e5dc5488212c8);
+            
+    
+            var popup_eff7144c8afa48008fcba313a53801d6 = L.popup({maxWidth: '300'});
+
+            
+                var html_62c99a9bd5ac46cd8ebd954125bc82c2 = $('<div id="html_62c99a9bd5ac46cd8ebd954125bc82c2" style="width: 100.0%; height: 100.0%;">Aussichtspunkt Wasserfall</div>')[0];
+                popup_eff7144c8afa48008fcba313a53801d6.setContent(html_62c99a9bd5ac46cd8ebd954125bc82c2);
+            
+
+            marker_fc15d932050d4e9f8a2f2b9db315d0a5.bindPopup(popup_eff7144c8afa48008fcba313a53801d6);
+
+            
+        
+    
+
+            var marker_3a713f3e02774d379c8f36b1e5f824e1 = L.marker(
+                [47.4951184,14.4548922],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6c96fbc01c224031aee6868f87b0daf6);
+            
+    
+
+                var icon_6cc65b0b090a4bf6b32bcd7c906f7c31 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_3a713f3e02774d379c8f36b1e5f824e1.setIcon(icon_6cc65b0b090a4bf6b32bcd7c906f7c31);
+            
+    
+            var popup_035bed263bc64f519cdfd86ac06f1b8a = L.popup({maxWidth: '300'});
+
+            
+                var html_2b9e28b4da574042b5e1e9a2c6cc42f6 = $('<div id="html_2b9e28b4da574042b5e1e9a2c6cc42f6" style="width: 100.0%; height: 100.0%;">Erwin Kroy</div>')[0];
+                popup_035bed263bc64f519cdfd86ac06f1b8a.setContent(html_2b9e28b4da574042b5e1e9a2c6cc42f6);
+            
+
+            marker_3a713f3e02774d379c8f36b1e5f824e1.bindPopup(popup_035bed263bc64f519cdfd86ac06f1b8a);
+
+            
+        
+    
+
+            var marker_47867f4db52e423e82a4a37f27ca9441 = L.marker(
+                [47.4892774,14.4854678],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6c96fbc01c224031aee6868f87b0daf6);
+            
+    
+
+                var icon_99801661e0954547b50362ae2ee49d98 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_47867f4db52e423e82a4a37f27ca9441.setIcon(icon_99801661e0954547b50362ae2ee49d98);
+            
+    
+            var popup_0bac2619875f488280056d390fb05a9a = L.popup({maxWidth: '300'});
+
+            
+                var html_09857ee5c859425391794043b9fa1777 = $('<div id="html_09857ee5c859425391794043b9fa1777" style="width: 100.0%; height: 100.0%;">Billa</div>')[0];
+                popup_0bac2619875f488280056d390fb05a9a.setContent(html_09857ee5c859425391794043b9fa1777);
+            
+
+            marker_47867f4db52e423e82a4a37f27ca9441.bindPopup(popup_0bac2619875f488280056d390fb05a9a);
+
+            
+        
+    
+
+            var marker_8d97f5e652ab40178a77c8b3163c25eb = L.marker(
+                [47.4950809,14.5576899],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6c96fbc01c224031aee6868f87b0daf6);
+            
+    
+
+                var icon_47bd1eada7c84fea8a9a951c5b60b09d = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_8d97f5e652ab40178a77c8b3163c25eb.setIcon(icon_47bd1eada7c84fea8a9a951c5b60b09d);
+            
+    
+            var popup_50cc14d0b61b4555b83ab6241ab97969 = L.popup({maxWidth: '300'});
+
+            
+                var html_11b6b58c9597418dbe29231be1015df5 = $('<div id="html_11b6b58c9597418dbe29231be1015df5" style="width: 100.0%; height: 100.0%;">Ferienhaus Harry</div>')[0];
+                popup_50cc14d0b61b4555b83ab6241ab97969.setContent(html_11b6b58c9597418dbe29231be1015df5);
+            
+
+            marker_8d97f5e652ab40178a77c8b3163c25eb.bindPopup(popup_50cc14d0b61b4555b83ab6241ab97969);
+
+            
+        
+    
+
+            var marker_cc53e62678dd47c798bf23060d3de475 = L.marker(
+                [47.4869344,14.4872355],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6c96fbc01c224031aee6868f87b0daf6);
+            
+    
+
+                var icon_4ad4564f66074c56880e75208ef6880e = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_cc53e62678dd47c798bf23060d3de475.setIcon(icon_4ad4564f66074c56880e75208ef6880e);
+            
+    
+            var popup_cd59612394654409a2f0ae6085f1c606 = L.popup({maxWidth: '300'});
+
+            
+                var html_33ce62cd6b6a48fcbd4a164beaea7a63 = $('<div id="html_33ce62cd6b6a48fcbd4a164beaea7a63" style="width: 100.0%; height: 100.0%;">Triebenerhof</div>')[0];
+                popup_cd59612394654409a2f0ae6085f1c606.setContent(html_33ce62cd6b6a48fcbd4a164beaea7a63);
+            
+
+            marker_cc53e62678dd47c798bf23060d3de475.bindPopup(popup_cd59612394654409a2f0ae6085f1c606);
+
+            
+        
+    
+
+            var marker_87069e86032c40edb9706899e5aecaf9 = L.marker(
+                [47.5729034,14.4614998],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_6c96fbc01c224031aee6868f87b0daf6);
+            
+    
+
+                var icon_b74f8a22243641dd85cf8b5320c9eede = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_87069e86032c40edb9706899e5aecaf9.setIcon(icon_b74f8a22243641dd85cf8b5320c9eede);
+            
+    
+            var popup_25b0f01fa28b4953a8a0a017773a55c1 = L.popup({maxWidth: '300'});
+
+            
+                var html_23bb14e77d8b47a4b06efe0a3782dc41 = $('<div id="html_23bb14e77d8b47a4b06efe0a3782dc41" style="width: 100.0%; height: 100.0%;">Admont</div>')[0];
+                popup_25b0f01fa28b4953a8a0a017773a55c1.setContent(html_23bb14e77d8b47a4b06efe0a3782dc41);
+            
+
+            marker_87069e86032c40edb9706899e5aecaf9.bindPopup(popup_25b0f01fa28b4953a8a0a017773a55c1);
+
+            
+        
+</script>

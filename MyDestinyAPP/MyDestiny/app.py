@@ -123,6 +123,9 @@ def remove_country_profile():
 
 @app.route('/profile/suggestion', methods=['POST'])
 def suggestion():
+    code_first = POI_DEFAULT_CODE
+    result = ''
+    list_result_country = []
     try:
         # Add country to the user
         if current_user.countries:
