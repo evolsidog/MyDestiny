@@ -36,7 +36,7 @@ def dar_destino(listaCandidatos, pesos, distances, predecir):
         distancia = distances[i]
         peso = pesos[i]
         destino = destinos[i]
-        destinoPesos.append(map(lambda x: x * peso/distances, destino))
+        destinoPesos.append(map(lambda x: x * peso/distancia, destino))
     sol = reduce(lambda x, y: suma(x, y), destinoPesos, [0] * len(destinoPesos[0]))
     destino = sol.index(max(sol))
     return destino
@@ -53,7 +53,7 @@ def dar_destino_top5(listaCandidatos, pesos, distances, predecir):
         distancia = distances[i]
         peso = pesos[i]
         destino = destinos[i]
-        destinoPesos.append(map(lambda x: x * peso/distances, destino))
+        destinoPesos.append(map(lambda x: x * peso/distancia, destino))
     sol = reduce(lambda x, y: suma(x, y), destinoPesos, [0] * len(destinoPesos[0]))
     return sol
 
@@ -75,6 +75,6 @@ def predict(input):
     # destino = dar_destino(candidatos, pesos, distances[0], input[0])  #
     destino_top5 = dar_destino_top5(candidatos, pesos, distances[0], input[0])
     # return list of top5 country ISO code
-    return pd.DataFrame(sol,index=COUNTRY_LIST,columns = ['valores']).sort_values(by=['valores'],ascending = False).index.tolist()[:5]
+    return pd.DataFrame(destino_top5,index=COUNTRY_LIST,columns = ['valores']).sort_values(by=['valores'],ascending = False).index.tolist()[:5]
     # Return country ISO code
     # return COUNTRY_LIST[destino]
